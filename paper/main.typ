@@ -132,7 +132,7 @@ Let `delta: cal(L) -> cal(K)` denote the *resolution* mapping (kernel tokenizati
 
 A single-layer tool would be simpler to write. Why pay the architectural cost? Three concrete answers:
 
-#figure(image("figures/fig_pipeline.pdf", width: 100%), caption: [The `d_Lambda` pipeline. Kernel operations (tokenize) are language-specific; middleware operations (normalize, context, distance, cluster, worth) are language-agnostic.]) <fig:pipeline>
+#figure(image("figures/fig_pipeline.pdf", width: 90%), caption: [The `d_Lambda` pipeline. Kernel operations (tokenize) are language-specific; middleware operations (normalize, context, distance, cluster, worth) are language-agnostic.]) <fig:pipeline>
 
 + *Adding a language is one file.* When we added C++ support, only `kernel/cpp.py` was new; the middleware required about ten lines of language-specific context heuristics; the application required one dispatch branch. No existing middleware logic was modified.
 + *Semantic rules are testable in isolation.* The three bugs that `d_Lambda` had during development—the `def`-name bug (C2), the `parameter_name` bug (D1), and the stale test (E5)—were all in the middleware. Because the middleware is a separate layer, each bug was fixed by modifying one function and running one test suite.
