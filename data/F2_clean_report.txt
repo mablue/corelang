@@ -1,0 +1,136 @@
+═══ F2-CLEAN — SmartMusicPlayer (user code only) ═══
+
+─── FILTERS APPLIED ───
+
+  Skipped: build/, kspCaches/, generated/, .gradle/, .idea/
+  Files skipped:  6
+  Files analyzed: 73
+
+─── SCALE ───
+
+  Units:            388
+  Tokens:           55907
+─── CLUSTERING ───
+
+  Pairs compared:   665
+  Pairs matched:    152
+  Clusters:         17
+  Worth extracting: 4
+  Potential savings:68 tokens
+
+─── TOP CLUSTERS (user code only) ───
+
+  [★] #1: size=9, avg_len=22.0, Δ=-41
+        setSearchQuery                      app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowFullPlayer                   app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowLyricsSheet                  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowSettings                     app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowCarMode                      app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        requestDeleteSong                   app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        ... and 3 more
+
+  [ ] #2: size=9, avg_len=14.0, Δ=+23
+        translateLyrics                     app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        seekTo                              app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        seekRelative                        app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setPlaybackSpeed                    app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setSleepTimer                       app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setPlaybackMode                     app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        ... and 3 more
+
+  [★] #3: size=5, avg_len=23.0, Δ=-17
+        setTierFilter                       app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setInspectingSong                   app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setEditingSongTags                  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setSelectedFolder                   app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setEditingSongLyrics                app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [★] #4: size=3, avg_len=27.0, Δ=-9
+        updateSongGenre                     app/src/main/java/com/example/data/repository/SongRepository.kt
+        saveUserLyrics                      app/src/main/java/com/example/data/repository/SongRepository.kt
+        updateTranslationOnly               app/src/main/java/com/example/data/repository/SongRepository.kt
+
+  [ ] #5: size=4, avg_len=19.0, Δ=+3
+        dismissDeleteDialog                 app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        clearPendingDeleteIntent            app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        clearScanMessage                    app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        dismissReclassifyResult             app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [ ] #6: size=7, avg_len=9.0, Δ=+51
+        stripEmoji                          app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+        stripSymbolJunk                     app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+        stripBitrateSuffix                  app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+        stripArtistSuffixes                 app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+        hasLettersOrDigits                  app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+        intToByteArray                      app/src/main/java/com/example/player/ProceduralAudioGenerator.kt
+        ... and 1 more
+
+  [★] #7: size=2, avg_len=31.0, Δ=-1
+        toggleBluetoothAutoPlay             app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        toggleCarModeAutoLaunch             app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [ ] #8: size=6, avg_len=10.0, Δ=+40
+        resume                              app/src/main/java/com/example/player/SmartAudioPlayer.kt
+        useOnlineTranslationInstead         app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        dismissTranslationDialog            app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        skipPrevious                        app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        dismissEvaluation                   app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        clearQueue                          app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [ ] #9: size=2, avg_len=29.0, Δ=+1
+        clearVadAttempted                   app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt
+        clearAnchors                        app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt
+
+  [ ] #10: size=3, avg_len=19.0, Δ=+7
+        localizedLabel                      app/src/main/java/com/example/data/model/Song.kt
+        localized                           app/src/main/java/com/example/data/model/Song.kt
+        localizedReason                     app/src/main/java/com/example/data/model/Song.kt
+
+  [ ] #11: size=2, avg_len=28.0, Δ=+2
+        createPlaylist                      app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        addSongsToPlaylist                  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [ ] #12: size=3, avg_len=17.0, Δ=+11
+        resetAllRanks                       app/src/main/java/com/example/data/repository/SongRepository.kt
+        deleteAllSongs                      app/src/main/java/com/example/data/repository/SongRepository.kt
+        removeDefaultSeedSongs              app/src/main/java/com/example/data/repository/SongRepository.kt
+
+  [ ] #13: size=3, avg_len=17.0, Δ=+11
+        fastFade                            app/src/main/java/com/example/ui/theme/Motion.kt
+        standardEnter                       app/src/main/java/com/example/ui/theme/Motion.kt
+        standardExit                        app/src/main/java/com/example/ui/theme/Motion.kt
+
+  [ ] #14: size=5, avg_len=9.0, Δ=+39
+        clearCache                          app/src/main/java/com/example/player/ReplayGainProvider.kt
+        setABLoopStart                      app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setABLoopEnd                        app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        clearABLoop                         app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        restartCurrentSong                  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+
+  [ ] #15: size=2, avg_len=21.0, Δ=+9
+        deletePlaylist                      app/src/main/java/com/example/data/repository/PlaylistRepository.kt
+        deleteSong                          app/src/main/java/com/example/data/repository/SongRepository.kt
+
+─── LARGEST USER FILES ───
+
+    96 units     33632 bytes  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+    54 units     49930 bytes  app/src/main/java/com/example/player/SmartAudioPlayer.kt
+    33 units     15390 bytes  app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+    23 units     17775 bytes  app/src/main/java/com/example/data/repository/SongRepository.kt
+    16 units     16356 bytes  app/src/main/java/com/example/player/PlaybackService.kt
+    11 units      3236 bytes  app/src/main/java/com/example/util/FileLogger.kt
+    10 units      4899 bytes  app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt
+     9 units     13605 bytes  app/src/main/java/com/example/data/lyrics/LyricsService.kt
+     8 units      2339 bytes  app/src/main/java/com/example/data/health/PerfTracker.kt
+     7 units     10344 bytes  app/src/main/java/com/example/data/lyrics/LyricAutoAligner.kt
+
+─── INTERPRETATION ───
+
+  Before filter:  53 clusters, 34 worth, 8541 tokens 'saved'
+  After filter:   17 clusters, 4 worth, 68 tokens actually saved
+
+  The 8541 figure was dominated by Room-generated code appearing
+  twice (in generated/ and kspCaches/backups/). It was comparing
+  a file to its own backup copy.
+
+  What remains is real user-code duplication.

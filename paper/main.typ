@@ -31,7 +31,7 @@
 ]
 
 #block(inset: (x: 1.4em, y: 0.9em), stroke: (left: 2pt + blue.darken(30%)), fill: luma(248))[
-  #text(weight: "bold")[Abstract.] Software clone detection has matured over two decades, yet modern tools remain noisy: false-positive rates of 30-60% are common, and developers distrust automatic findings. We argue this is not an algorithmic failure but an *architectural* one: existing tools conflate three concerns—syntax (how code is written), semantics (what it means), and orchestration (which files, which thresholds). We present *corelang*, a tool that separates these into three layers with a strict dependency DAG: a *kernel* that knows only syntax (tokenizers for JavaScript, Python, C, and C++), a *middleware* that bridges syntax to semantics (normalization, context inference, distance, clustering, worth criterion), and an *application* that orchestrates. The central contribution is `d_Lambda`, a semantic distance that counts only semantic differences between two token streams, ignoring alpha-renames. Context—*what does this identifier mean here?*—is inferred by position: after a dot or arrow it is a field access (semantic); after `def`, `function`, or `::` it is a function name (semantic); inside parameters it is alpha-renamable. We validate across four languages and five codebases: Backbone 0.1.0 (JS, 618 lines, 3 clusters, 1 worth extracting), Bottle 0.13 (Python, 4,675 lines, 15 clusters, 4 worth), and Bitcoin 0.1.5 (C++, 19,901 lines, 1,002 units, 75 clusters, 23 worth). The worth criterion `L > C n slash (n-1)` correctly rejects 117 empty MFC stubs and correctly rejects the five Bottle HTTP verbs as uneconomical. We state the `d_Lambda = 0` iff semantic-equivalence theorem under an explicit `M compose K` completeness assumption and report every violation of it that occurred during development. The complete tool, paper, and data are open-source.
+  #text(weight: "bold")[Abstract.] Software clone detection has matured over two decades, yet modern tools remain noisy: false-positive rates of 30-60% are common, and developers distrust automatic findings. We argue this is not an algorithmic failure but an *architectural* one: existing tools conflate three concerns—syntax (how code is written), semantics (what it means), and orchestration (which files, which thresholds). We present *corelang*, a tool that separates these into three layers with a strict dependency DAG: a *kernel* that knows only syntax (tokenizers for JavaScript, Python, C, and C++), a *middleware* that bridges syntax to semantics (normalization, context inference, distance, clustering, worth criterion), and an *application* that orchestrates. The central contribution is `d_Lambda`, a semantic distance that counts only semantic differences between two token streams, ignoring alpha-renames. Context—*what does this identifier mean here?*—is inferred by position: after a dot or arrow it is a field access (semantic); after `def`, `function`, or `::` it is a function name (semantic); inside parameters it is alpha-renamable. We validate across five languages (JavaScript, Python, C, C++, Kotlin) and four codebases: Backbone 0.1.0 (JS, 618 lines, 3 clusters, 1 worth extracting), Bottle 0.13 (Python, 4,675 lines, 15 clusters, 4 worth), and Bitcoin 0.1.5 (C++, 19,901 lines, 1,002 units, 75 clusters, 23 worth). A fourth case study on SmartMusicPlayer, an Android music player written by the first author in Kotlin (17,819 lines, 388 user units), exposes a methodological hazard: without a build-artifact filter, generated code duplicated across `generated/` and `kspCaches/` inflates reported savings from 68 to 8,541 tokens. Both figures are reported. The worth criterion `L > C n slash (n-1)` correctly rejects 117 empty MFC stubs and correctly rejects the five Bottle HTTP verbs as uneconomical. We state the `d_Lambda = 0` iff semantic-equivalence theorem under an explicit `M compose K` completeness assumption and report every violation of it that occurred during development. The complete tool, paper, and data are open-source.
 
   #v(0.4em)
   #text(weight: "bold")[Keywords.] code clone detection · semantic distance · layered architecture · software maintainability · Levenshtein distance · refactoring economics
@@ -57,7 +57,7 @@ This paper makes six contributions:
 + A semantic distance `d_Lambda` that classifies each identifier difference as *alpha-renamable* or *semantic* by syntactic context (Section 4).
 + A multi-layer normalization procedure that provably preserves semantics (Section 5).
 + A worth criterion `L > C n slash (n-1)` parameterized by language (Section 7).
-+ Empirical validation across four languages and five codebases, including Bitcoin v0.1.5 (Section 8), with reported false positives.
++ Empirical validation across five languages and four codebases, including Bitcoin v0.1.5 and SmartMusicPlayer (Section 8), with reported false positives and one methodological hazard (build artifacts).
 + An honest treatment of the `d_Lambda` theorem's completeness assumption (Section 4.4), with three documented failures.
 
 == Paper structure
@@ -232,7 +232,7 @@ For every layer `L` and every token sequence `t`, `L(L(t)) = L(t)`. This is veri
 
 The implementation is organized as:
 
-#raw(lang: "text", block: true, "pkg/corelang/\n  kernel/\n    js.py       (177 lines)   JavaScript tokenizer + scanner\n    py.py       ( 68 lines)   Python tokenizer + scanner\n    cpp.py      (183 lines)   C / C++ tokenizer + scanner\n  middleware/\n    normalize.py ( 98 lines)  L0-L4\n    context.py   ( 55 lines)  infer_context\n    distance.py  ( 71 lines)  Levenshtein, d_Lambda, Jaccard\n    cluster.py   ( 73 lines)  union-find\n    worth.py     ( 22 lines)  worth criterion\n  analyzer.py    ( 62 lines)  orchestration\n  __main__.py    ( 35 lines)  CLI")
+#raw(lang: "text", block: true, "pkg/corelang/\n  kernel/\n    js.py       (177 lines)   JavaScript tokenizer + scanner\n    py.py       ( 68 lines)   Python tokenizer + scanner\n    cpp.py      (183 lines)   C / C++ tokenizer + scanner\n    kotlin.py   (180 lines)   Kotlin tokenizer + scanner\n  middleware/\n    normalize.py ( 98 lines)  L0-L4\n    context.py   ( 55 lines)  infer_context\n    distance.py  ( 71 lines)  Levenshtein, d_Lambda, Jaccard\n    cluster.py   ( 73 lines)  union-find\n    worth.py     ( 22 lines)  worth criterion\n  analyzer.py    ( 62 lines)  orchestration\n  __main__.py    ( 35 lines)  CLI")
 
 == Kernel design choices
 
@@ -284,13 +284,14 @@ The Bottle row is the negative case that gives the paper its title: the criterio
 
 == Setup
 
-We evaluated corelang on three codebases, described in the table below. The Bitcoin codebase was chosen specifically because it was written in 2009, before unit testing was standard, and contains the kind of duplication that modern codebases avoid. Backbone and Bottle serve as "clean" controls; Bitcoin serves as the "nasty" test.
+We evaluated corelang on four codebases, described in the table below. The Bitcoin codebase was chosen specifically because it was written in 2009, before unit testing was standard, and contains the kind of duplication that modern codebases avoid. Backbone and Bottle serve as "clean" controls; Bitcoin serves as the "nasty" test.
 
 #table(columns: (1fr, auto, auto, auto, auto, auto), align: (left, center, center, center, center, center), inset: 5pt,
   [*Codebase*], [*Lang*], [*LoC*], [*Units*], [*Clusters*], [*Worth*],
   [Backbone 0.1.0 @backbone010], [JS], [618], [53], [3], [1],
   [Bottle 0.13 @bottle013], [PY], [4,675], [367], [15], [4],
   [Bitcoin 0.1.5 @bitcoin015], [C++], [19,901], [1,002], [75], [23],
+  [SmartMusicPlayer @smartmusicplayer], [KT], [17,819], [388], [17], [4],
 )
 
 #figure(image("figures/fig_clusters.pdf", width: 80%), caption: [Clusters found vs. worth extracting. The worth filter is aggressive: only about 30% of clusters pass, as designed.]) <fig:clusters>
@@ -325,6 +326,41 @@ The file `src/uibase.h` contains 117 empty `virtual void On*() { }` stubs, each 
 
 The file `src/ui.cpp` contains twenty methods `CEditProductDialog::OnButtonDel0` through `OnButtonDel19`, each 17 tokens. The tool groups them into a cluster of size 20, `L = 17`. This passes the worth criterion (required `L` about 15.8), and extraction would save 23 tokens.
 
+
+== SmartMusicPlayer - the real-world Android test
+
+SmartMusicPlayer @smartmusicplayer is an Android music player written in Kotlin (17,819 lines across 79 files). Unlike the other codebases, it is the first author's own production code, still under active development. It is a common case study in practice: a personal project that has never been audited by a clone detector.
+
+=== Initial run: the build-artifact trap
+
+A naive run on all .kt files (n = 486 units) reports 53 clusters, 34 worth extracting, and 8,541 tokens of potential savings. Every cluster in the top ten is identical: the Room persistence library's KSP code generator writes the same DAO implementation to `app/build/generated/ksp/` and to `app/build/kspCaches/debug/backups/`. The tool compares each file to its own backup copy and reports perfect duplication.
+
+The tool is technically correct. It is also useless. The first real finding of this case study is methodological: an analyzer that does not filter build artifacts cannot analyze Android projects.
+
+=== Filtered run: what the user wrote
+
+Excluding `build/`, `kspCaches/`, `generated/`, `.gradle/`, and `.idea/` reduces the corpus to 73 files, 388 units, 55,907 tokens. The same pipeline yields 17 clusters, of which 4 pass the worth criterion, for a total of 68 tokens of genuine duplication.
+
+The four clusters are all actionable:
+
+#table(columns: (auto, 1fr, auto, auto), align: (center, left, center, center), inset: 5pt,
+  [*No*], [*Members*], [*n*], [*Delta*],
+  [1], [setSearchQuery ... setUserPlaylistsVisible], [9], [-41],
+  [2], [setTierFilter ... setEditingSongLyrics], [5], [-17],
+  [3], [updateSongGenre, saveUserLyrics, updateTranslationOnly], [3], [-9],
+  [4], [toggleBluetoothAutoPlay, toggleCarModeAutoLaunch], [2], [-1],
+)
+
+Cluster 1 is the most interesting. Nine setter methods in `MusicPlayerViewModel.kt` share an identical 22-token body: a `viewModelScope.launch` that sets a StateFlow and posts a snackbar. A single private helper `_setFlag(flow, value)` would reduce each to one line, saving 41 tokens with no behavioral change.
+
+#figure(image("figures/fig_smartmusicplayer.pdf", width: 92%), caption: [SmartMusicPlayer - the effect of filtering build artifacts. Unfiltered analysis reports 53 clusters and 8,541 tokens of savings; filtered analysis reports 17 clusters and 68 tokens. The difference is generated code, not user duplication.]) <fig:smp>
+
+=== What this says about the user's codebase
+
+The real question is not "how many tokens were saved" but "how much duplication exists relative to size." Bitcoin (19,901 lines) has 23 worth clusters and 466 tokens of savings - 2.3% of code. SmartMusicPlayer (17,819 lines) has 4 worth clusters and 68 tokens of savings - 0.12% of code. The user's own codebase is roughly nineteen times cleaner than Satoshi's.
+
+This is a nontrivial negative result. The tool did not find "many duplications" in SmartMusicPlayer; it found four. The paradigm's value here is not compression but verification: the user can now state, falsifiably, that their codebase has 0.12% duplication, not "a lot."
+
 == Threshold sensitivity
 
 For fuzzy clustering (Levenshtein on normalized tokens), the choice of threshold matters significantly. On Backbone, the cluster count varies from 4 (at threshold 0.8) to 8 (at 0.5). On Bottle, from 18 to 32. This sensitivity is not a flaw of the algorithm; it is the inherent ambiguity of "how similar is similar?" We recommend 0.7 as a default, since it balances precision and recall.
@@ -339,7 +375,7 @@ For fuzzy clustering (Levenshtein on normalized tokens), the choice of threshold
   [DECKARD @jiang2007deckard], [tree], [multi], [no], [vector clustering, no economics],
   [NiCad @cordy2014nicad], [hybrid], [multi], [no], [text-based, no economics],
   [SourcererCC @sajnani2016sourcerercc], [token], [multi], [no], [250 MLOC, no economics],
-  [corelang (ours)], [token+d_Lambda], [JS,PY,C,C++], [*yes*], [3-layer, context-aware, honest],
+  [corelang (ours)], [token+d_Lambda], [JS,PY,C,C++,KT], [*yes*], [3-layer, context-aware, honest],
 )
 
 The unique feature is the *worth* column: corelang is the only tool in the table that says *whether* a detected clone is worth extracting. The others report findings; we report findings *and verdicts*.
@@ -358,7 +394,9 @@ The C++ context classifier is incomplete. It classifies user-defined types (like
 
 Preprocessor directives are ignored. Code inside `#ifdef` blocks is analyzed unconditionally, so mutually exclusive branches may be merged into false clusters. Bitcoin v0.1.5 uses `#ifdef` heavily for Windows and Linux portability, so this is a genuine issue for that codebase.
 
-Function names are treated as semantic, which is correct for refactoring (you cannot silently rename a public function) but causes false negatives for pattern discovery. `GetSerializeSize` and `GetSize` will not cluster, even if their bodies are identical.
+Function names are treated as semantic, which is correct for refactoring (you cannot silently rename a public function) but causes false negatives for pattern discovery.
+
+Build-artifact contamination. The SmartMusicPlayer case (Section 8.5) shows that without explicit filtering, generated code inflates results by two orders of magnitude: 8,541 tokens of reported savings reduce to 68 after filtering out `build/`, `kspCaches/`, `generated/`, `.gradle/`, and `.idea/`. This is a limitation of the application layer, not the kernel or the middleware: the tokenizer correctly parses generated code, the distance correctly measures it, and the worth criterion correctly evaluates it. The filter is a policy that must live in the application. `GetSerializeSize` and `GetSize` will not cluster, even if their bodies are identical.
 
 == Cost-benefit
 
@@ -408,13 +446,14 @@ Test hashes:
   [Backbone 0.1.0], [6d68e6ecc0125efa], [618],
   [Bottle 0.13], [f7509d8f9eaaeb08], [4,675],
   [Bitcoin 0.1.5], [(see F1_summary.json)], [19,901],
+  [SmartMusicPlayer], [(see F2_clean_summary.json)], [17,819],
 )
 
 All 65 unit tests (10 synthetic, 15 normalization, 40 kernel/middleware) pass. They are stored in `tests/test_synthetic.py` and `tests/test_layer.py`.
 
 = Conclusion
 
-The kernel paradigm is a real contribution to code-clone detection. It is not a new algorithm; every component—Levenshtein distance, union-find clustering, token-level normalization—is well-established. What is new is the *layer structure*: syntax in the kernel, semantics in the middleware, orchestration in the application. This structure buys extensibility (adding C++ was one file), testability (each layer's tests are independent), and honesty (the middleware knows exactly what it does, and reports it).
+The kernel paradigm is a real contribution to code-clone detection, validated across five languages and four codebases. It is not a new algorithm; every component—Levenshtein distance, union-find clustering, token-level normalization—is well-established. What is new is the *layer structure*: syntax in the kernel, semantics in the middleware, orchestration in the application. This structure buys extensibility (adding C++ was one file), testability (each layer's tests are independent), and honesty (the middleware knows exactly what it does, and reports it).
 
 The distance is a real contribution to the *measurement* of clones. It is not the only reasonable metric—tree-based metrics are more precise, graph-based metrics are more exact—but it is *language-agnostic*, *context-aware*, and *honest*: it says what it counts and what it ignores.
 

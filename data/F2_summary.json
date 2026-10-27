@@ -1,0 +1,572 @@
+{
+  "patch": "F2",
+  "target": "SmartMusicPlayer",
+  "language": "kotlin",
+  "files_analyzed": 79,
+  "total_units": 486,
+  "total_tokens": 71835,
+  "pairs_compared": 1062,
+  "pairs_matched": 285,
+  "clusters_found": 53,
+  "worth_extracting": 34,
+  "potential_savings": 8541,
+  "top_clusters": [
+    {
+      "size": 6,
+      "avg_length": 751.0,
+      "orig_tokens": 4506,
+      "projected_new_tokens": 841,
+      "projected_delta": -3665,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getAllSongs",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        },
+        {
+          "name": "getRankedSongs",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        },
+        {
+          "name": "getUnplayedSongs",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        },
+        {
+          "name": "getAllSongs",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        },
+        {
+          "name": "getRankedSongs",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        },
+        {
+          "name": "getUnplayedSongs",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 751
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 1114.0,
+      "orig_tokens": 2228,
+      "projected_new_tokens": 1144,
+      "projected_delta": -1084,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "createOpenDelegate",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/MusicDatabase_Impl.kt",
+          "length": 1114
+        },
+        {
+          "name": "createOpenDelegate",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/MusicDatabase_Impl.kt",
+          "length": 1114
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 750.0,
+      "orig_tokens": 1500,
+      "projected_new_tokens": 780,
+      "projected_delta": -720,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getSongById",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 750
+        },
+        {
+          "name": "getSongById",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 750
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 745.0,
+      "orig_tokens": 1490,
+      "projected_new_tokens": 775,
+      "projected_delta": -715,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getAllSongsOnce",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 745
+        },
+        {
+          "name": "getAllSongsOnce",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 745
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 308.0,
+      "orig_tokens": 616,
+      "projected_new_tokens": 338,
+      "projected_delta": -278,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "bind",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 308
+        },
+        {
+          "name": "bind",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 308
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 298.0,
+      "orig_tokens": 596,
+      "projected_new_tokens": 328,
+      "projected_delta": -268,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "bind",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 298
+        },
+        {
+          "name": "bind",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 298
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 218.0,
+      "orig_tokens": 436,
+      "projected_new_tokens": 248,
+      "projected_delta": -188,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getAllPlaylists",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 218
+        },
+        {
+          "name": "getAllPlaylists",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 218
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 217.0,
+      "orig_tokens": 434,
+      "projected_new_tokens": 247,
+      "projected_delta": -187,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getPlaylistById",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 217
+        },
+        {
+          "name": "getPlaylistById",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 217
+        }
+      ]
+    },
+    {
+      "size": 6,
+      "avg_length": 51.0,
+      "orig_tokens": 306,
+      "projected_new_tokens": 141,
+      "projected_delta": -165,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "deleteDefaultSeedSongs",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        },
+        {
+          "name": "resetAllRanks",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        },
+        {
+          "name": "deleteAll",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        },
+        {
+          "name": "deleteDefaultSeedSongs",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        },
+        {
+          "name": "resetAllRanks",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        },
+        {
+          "name": "deleteAll",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 51
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 148.0,
+      "orig_tokens": 296,
+      "projected_new_tokens": 178,
+      "projected_delta": -118,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateSongsGenre",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 148
+        },
+        {
+          "name": "updateSongsGenre",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 148
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 147.0,
+      "orig_tokens": 294,
+      "projected_new_tokens": 177,
+      "projected_delta": -117,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateSongLyrics",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 147
+        },
+        {
+          "name": "updateSongLyrics",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 147
+        }
+      ]
+    },
+    {
+      "size": 4,
+      "avg_length": 68.0,
+      "orig_tokens": 272,
+      "projected_new_tokens": 128,
+      "projected_delta": -144,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "deleteById",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 68
+        },
+        {
+          "name": "deleteSong",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 68
+        },
+        {
+          "name": "deleteById",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 68
+        },
+        {
+          "name": "deleteSong",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 68
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 131.0,
+      "orig_tokens": 262,
+      "projected_new_tokens": 161,
+      "projected_delta": -101,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getLanguageGroups",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 131
+        },
+        {
+          "name": "getLanguageGroups",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 131
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 114.0,
+      "orig_tokens": 228,
+      "projected_new_tokens": 144,
+      "projected_delta": -84,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateSongBasicFields",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 114
+        },
+        {
+          "name": "updateSongBasicFields",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 114
+        }
+      ]
+    },
+    {
+      "size": 9,
+      "avg_length": 22.0,
+      "orig_tokens": 198,
+      "projected_new_tokens": 157,
+      "projected_delta": -41,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "setSearchQuery",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowFullPlayer",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowLyricsSheet",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowSettings",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowCarMode",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "requestDeleteSong",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setEqualizerVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setQueueVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setUserPlaylistsVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 94.0,
+      "orig_tokens": 188,
+      "projected_new_tokens": 124,
+      "projected_delta": -64,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateTranslationOnly",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 94
+        },
+        {
+          "name": "updateTranslationOnly",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 94
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 91.0,
+      "orig_tokens": 182,
+      "projected_new_tokens": 121,
+      "projected_delta": -61,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getAllUris",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 91
+        },
+        {
+          "name": "getAllUris",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 91
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 88.0,
+      "orig_tokens": 176,
+      "projected_new_tokens": 118,
+      "projected_delta": -58,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "getSongCount",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 88
+        },
+        {
+          "name": "getSongCount",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 88
+        }
+      ]
+    },
+    {
+      "size": 6,
+      "avg_length": 29.0,
+      "orig_tokens": 174,
+      "projected_new_tokens": 119,
+      "projected_delta": -55,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "delete",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 29
+        },
+        {
+          "name": "update",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 29
+        },
+        {
+          "name": "updateSong",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 29
+        },
+        {
+          "name": "delete",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 29
+        },
+        {
+          "name": "update",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+          "length": 29
+        },
+        {
+          "name": "updateSong",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 29
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 83.0,
+      "orig_tokens": 166,
+      "projected_new_tokens": 113,
+      "projected_delta": -53,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateLyricsStatusOnly",
+          "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 83
+        },
+        {
+          "name": "updateLyricsStatusOnly",
+          "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+          "length": 83
+        }
+      ]
+    }
+  ],
+  "largest_files": [
+    {
+      "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+      "bytes": 33632,
+      "units": 96
+    },
+    {
+      "file": "app/src/main/java/com/example/player/SmartAudioPlayer.kt",
+      "bytes": 49930,
+      "units": 54
+    },
+    {
+      "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+      "bytes": 15390,
+      "units": 33
+    },
+    {
+      "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt",
+      "bytes": 44303,
+      "units": 28
+    },
+    {
+      "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt",
+      "bytes": 44303,
+      "units": 28
+    },
+    {
+      "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+      "bytes": 17775,
+      "units": 23
+    },
+    {
+      "file": "app/src/main/java/com/example/player/PlaybackService.kt",
+      "bytes": 16356,
+      "units": 16
+    },
+    {
+      "file": "app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+      "bytes": 7008,
+      "units": 13
+    },
+    {
+      "file": "app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt",
+      "bytes": 7008,
+      "units": 13
+    },
+    {
+      "file": "app/src/main/java/com/example/util/FileLogger.kt",
+      "bytes": 3236,
+      "units": 11
+    }
+  ]
+}

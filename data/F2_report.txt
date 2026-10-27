@@ -1,0 +1,129 @@
+═══ F2 REPORT — SmartMusicPlayer (Kotlin) ═══
+
+─── SCALE ───
+
+  Files:            79
+  Units:            486
+  Total tokens:     71835
+
+─── CLUSTERING (exact d_Λ ≤ 2, same-length) ───
+
+  Pairs compared:   1062
+  Pairs matched:    285
+  Clusters:         53
+  Worth extracting: 34
+  Potential savings:8541 tokens
+
+─── TOP CLUSTERS ───
+
+  [★] #1: size=6, avg_len=751.0, Δ=-3665
+        getAllSongs                              app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getRankedSongs                           app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getUnplayedSongs                         app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getAllSongs                              app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+        getRankedSongs                           app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+        ... and 1 more
+
+  [★] #2: size=2, avg_len=1114.0, Δ=-1084
+        createOpenDelegate                       app/build/generated/ksp/debug/kotlin/com/example/data/db/MusicDatabase_Impl.kt
+        createOpenDelegate                       app/build/kspCaches/debug/backups/kotlin/com/example/data/db/MusicDatabase_Impl.kt
+
+  [★] #3: size=2, avg_len=750.0, Δ=-720
+        getSongById                              app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getSongById                              app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #4: size=2, avg_len=745.0, Δ=-715
+        getAllSongsOnce                          app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getAllSongsOnce                          app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #5: size=2, avg_len=308.0, Δ=-278
+        bind                                     app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        bind                                     app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #6: size=2, avg_len=298.0, Δ=-268
+        bind                                     app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        bind                                     app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #7: size=2, avg_len=218.0, Δ=-188
+        getAllPlaylists                          app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+        getAllPlaylists                          app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+
+  [★] #8: size=2, avg_len=217.0, Δ=-187
+        getPlaylistById                          app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+        getPlaylistById                          app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+
+  [★] #9: size=6, avg_len=51.0, Δ=-165
+        deleteDefaultSeedSongs                   app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        resetAllRanks                            app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        deleteAll                                app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        deleteDefaultSeedSongs                   app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+        resetAllRanks                            app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+        ... and 1 more
+
+  [★] #10: size=2, avg_len=148.0, Δ=-118
+        updateSongsGenre                         app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        updateSongsGenre                         app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #11: size=2, avg_len=147.0, Δ=-117
+        updateSongLyrics                         app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        updateSongLyrics                         app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #12: size=4, avg_len=68.0, Δ=-144
+        deleteById                               app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+        deleteSong                               app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        deleteById                               app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+        deleteSong                               app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #13: size=2, avg_len=131.0, Δ=-101
+        getLanguageGroups                        app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        getLanguageGroups                        app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #14: size=2, avg_len=114.0, Δ=-84
+        updateSongBasicFields                    app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+        updateSongBasicFields                    app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+
+  [★] #15: size=9, avg_len=22.0, Δ=-41
+        setSearchQuery                           app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowFullPlayer                        app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowLyricsSheet                       app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowSettings                          app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        setShowCarMode                           app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+        ... and 4 more
+
+─── LARGEST FILES ───
+
+    96 units     33632 bytes  app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt
+    54 units     49930 bytes  app/src/main/java/com/example/player/SmartAudioPlayer.kt
+    33 units     15390 bytes  app/src/main/java/com/example/data/cleanup/TagCleaner.kt
+    28 units     44303 bytes  app/build/generated/ksp/debug/kotlin/com/example/data/db/SongDao_Impl.kt
+    28 units     44303 bytes  app/build/kspCaches/debug/backups/kotlin/com/example/data/db/SongDao_Impl.kt
+    23 units     17775 bytes  app/src/main/java/com/example/data/repository/SongRepository.kt
+    16 units     16356 bytes  app/src/main/java/com/example/player/PlaybackService.kt
+    13 units      7008 bytes  app/build/generated/ksp/debug/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+    13 units      7008 bytes  app/build/kspCaches/debug/backups/kotlin/com/example/data/db/PlaylistDao_Impl.kt
+    11 units      3236 bytes  app/src/main/java/com/example/util/FileLogger.kt
+
+─── HONEST ASSESSMENT ───
+
+  What worked:
+    - Kotlin tokenizer parses SmartMusicPlayer without crashing
+    - All unit tests pass
+    - JS/PY regression preserved
+
+  Known limits of Kotlin heuristic:
+    - String interpolation `${expr}` treated as opaque STR
+    - Nested functions inside lambdas may be missed or duplicated
+    - Android lifecycle boilerplate has similar bodies but different
+      semantics — review manually
+
+  Interpretation:
+    - Compare cluster count with Bitcoin: 75 clusters / 19,901 lines.
+      If SmartMusicPlayer shows >100 clusters, either the codebase
+      has significant duplication, or the scanner is too permissive.
+    - Android boilerplate clusters are expected, mostly worth=False.
+
+  Architectural proof:
+    - kernel/kotlin.py      — new file, ~180 lines
+    - middleware/context.py — one `if lang == 'kotlin'` block
+    - analyzer.py           — one dispatch branch
+    Everything else untouched.

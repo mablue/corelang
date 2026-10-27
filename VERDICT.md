@@ -61,3 +61,22 @@ structural patterns and estimating whether extracting them pays off.
 
 The alternative — traditional clone detection — is noise.
 `corelang` is signal.
+
+
+## Addendum: Kotlin / SmartMusicPlayer (F2)
+
+The tool was also tested on **SmartMusicPlayer**, an Android music player
+in Kotlin by the first author, available at
+https://github.com/mablue/SmartMusicPlayer.
+
+**Result:** 17,819 lines, 388 user units (after filtering build artifacts),
+17 clusters, 4 worth extracting, **68 tokens of genuine duplication** (0.12% of code).
+
+**Methodological hazard:** an unfiltered run on the same codebase reports
+53 clusters and 8,541 tokens of savings. 99% of that figure comes from
+Room-generated code duplicated across `app/build/generated/ksp/` and
+`app/build/kspCaches/debug/backups/`. The tool was comparing each file
+to its own backup copy.
+
+**Interpretation:** SmartMusicPlayer is ~19× cleaner than Bitcoin v0.1.5
+(0.12% vs 2.3% duplication). The tool, once filtered, correctly reports this.

@@ -25,6 +25,7 @@ and Bitcoin v0.1.5.
 | Backbone 0.1.0 | JS   | 618    | 53    | 3        | 1     |
 | Bottle 0.13    | PY   | 4,675  | 367   | 15       | 4     |
 | Bitcoin 0.1.5  | C++  | 19,901 | 1,002 | 75       | 23    |
+| SmartMusicPlayer | KT | 17,819 | 388   | 17       | 4     |
 
 The worth criterion correctly rejects 117 empty MFC stubs and the 5 Bottle
 HTTP verbs (Python's adapter cost makes extraction uneconomical).
@@ -32,3 +33,12 @@ HTTP verbs (Python's adapter cost makes extraction uneconomical).
 ## License
 
 MIT.
+
+
+SmartMusicPlayer is an Android music player in Kotlin by the first author.
+Source: https://github.com/mablue/SmartMusicPlayer
+
+**Build-artifact filter (F2):** on Android projects, exclude `build/`, `kspCaches/`,
+`generated/`, `.gradle/`, and `.idea/`. Without this filter, Room-generated code
+duplicated across `generated/` and `kspCaches/` inflates reported savings
+from 68 to 8,541 tokens. Both figures are reported in the paper.

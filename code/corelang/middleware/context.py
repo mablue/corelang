@@ -51,4 +51,22 @@ def infer_context(tokens, pos, lang):
             return 'function_name'      # function/method call
         return 'alpha_local'            # local variable, parameter, type
 
+    # Kotlin specific heuristics (added in F2)
+    if lang == 'kotlin':
+        if prev in ('.', '?.'):
+            return 'field_access'
+        if prev in ('fun', '::'):
+            return 'function_name'
+        if prev in ('class', 'object', 'interface', 'typealias'):
+            return 'function_name'
+        if prev == '@':
+            return 'function_name'
+        if prev in ('val', 'var'):
+            return 'alpha_local'
+        if nxt == '(':
+            return 'function_name'
+        if nxt == '::':
+            return 'function_name'
+        return 'alpha_local'
+
     return 'unknown'

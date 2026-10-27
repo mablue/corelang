@@ -5,6 +5,7 @@ from pathlib import Path
 from .kernel import js as kernel_js
 from .kernel import py as kernel_py
 from .kernel import cpp as kernel_cpp
+from .kernel import kotlin as kernel_kotlin
 from .middleware.distance import d_lambda, levenshtein, jaccard_bigrams
 from .middleware.cluster import DSU, cluster_exact, cluster_fuzzy
 from .middleware.worth import worth_extracting
@@ -15,6 +16,8 @@ def scan_js_units(source):  return kernel_js.scan_units(source)
 def scan_py_units(source):  return kernel_py.scan_units(source)
 def tokenize_cpp(source):   return kernel_cpp.tokenize(source)
 def scan_cpp_units(source): return kernel_cpp.scan_units(source)
+def tokenize_kotlin(source): return kernel_kotlin.tokenize(source)
+def scan_kotlin_units(source): return kernel_kotlin.scan_units(source)
 
 def analyze(path, lang, threshold=2):
     src = Path(path).read_text(encoding='utf-8', errors='replace')
@@ -22,6 +25,8 @@ def analyze(path, lang, threshold=2):
         raw = scan_py_units(src)
     elif lang == 'cpp':
         raw = scan_cpp_units(src)
+    elif lang == 'kotlin':
+        raw = scan_kotlin_units(src)
     else:
         raw = scan_js_units(src)
     n_total = len(src)
@@ -32,6 +37,8 @@ def analyze(path, lang, threshold=2):
             tk = tokenize_py
         elif lang == 'cpp':
             tk = tokenize_cpp
+        elif lang == 'kotlin':
+            tk = tokenize_kotlin
         else:
             tk = tokenize_js
         toks = tk(u['body'])

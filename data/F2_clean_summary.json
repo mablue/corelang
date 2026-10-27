@@ -1,0 +1,549 @@
+{
+  "patch": "F2-clean",
+  "target": "SmartMusicPlayer",
+  "note": "build/generated/kspCaches excluded",
+  "files_skipped": 6,
+  "files_analyzed": 73,
+  "total_units": 388,
+  "total_tokens": 55907,
+  "pairs_compared": 665,
+  "pairs_matched": 152,
+  "clusters_found": 17,
+  "worth_extracting": 4,
+  "potential_savings": 68,
+  "top_clusters": [
+    {
+      "size": 9,
+      "avg_length": 22.0,
+      "projected_delta": -41,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "setSearchQuery",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowFullPlayer",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowLyricsSheet",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowSettings",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setShowCarMode",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "requestDeleteSong",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setEqualizerVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setQueueVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        },
+        {
+          "name": "setUserPlaylistsVisible",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 22
+        }
+      ]
+    },
+    {
+      "size": 9,
+      "avg_length": 14.0,
+      "projected_delta": 23,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "translateLyrics",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "seekTo",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "seekRelative",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "setPlaybackSpeed",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "setSleepTimer",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "setPlaybackMode",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "playNext",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "addToQueue",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        },
+        {
+          "name": "removeFromQueue",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 14
+        }
+      ]
+    },
+    {
+      "size": 5,
+      "avg_length": 23.0,
+      "projected_delta": -17,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "setTierFilter",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 23
+        },
+        {
+          "name": "setInspectingSong",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 23
+        },
+        {
+          "name": "setEditingSongTags",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 23
+        },
+        {
+          "name": "setSelectedFolder",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 23
+        },
+        {
+          "name": "setEditingSongLyrics",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 23
+        }
+      ]
+    },
+    {
+      "size": 3,
+      "avg_length": 27.0,
+      "projected_delta": -9,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "updateSongGenre",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 27
+        },
+        {
+          "name": "saveUserLyrics",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 27
+        },
+        {
+          "name": "updateTranslationOnly",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 27
+        }
+      ]
+    },
+    {
+      "size": 4,
+      "avg_length": 19.0,
+      "projected_delta": 3,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "dismissDeleteDialog",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 19
+        },
+        {
+          "name": "clearPendingDeleteIntent",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 19
+        },
+        {
+          "name": "clearScanMessage",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 19
+        },
+        {
+          "name": "dismissReclassifyResult",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "size": 7,
+      "avg_length": 9.0,
+      "projected_delta": 51,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "stripEmoji",
+          "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+          "length": 9
+        },
+        {
+          "name": "stripSymbolJunk",
+          "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+          "length": 9
+        },
+        {
+          "name": "stripBitrateSuffix",
+          "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+          "length": 9
+        },
+        {
+          "name": "stripArtistSuffixes",
+          "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+          "length": 9
+        },
+        {
+          "name": "hasLettersOrDigits",
+          "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+          "length": 9
+        },
+        {
+          "name": "intToByteArray",
+          "file": "app/src/main/java/com/example/player/ProceduralAudioGenerator.kt",
+          "length": 9
+        },
+        {
+          "name": "shortToByteArray",
+          "file": "app/src/main/java/com/example/player/ProceduralAudioGenerator.kt",
+          "length": 9
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 31.0,
+      "projected_delta": -1,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "toggleBluetoothAutoPlay",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 31
+        },
+        {
+          "name": "toggleCarModeAutoLaunch",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 31
+        }
+      ]
+    },
+    {
+      "size": 6,
+      "avg_length": 10.0,
+      "projected_delta": 40,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "resume",
+          "file": "app/src/main/java/com/example/player/SmartAudioPlayer.kt",
+          "length": 10
+        },
+        {
+          "name": "useOnlineTranslationInstead",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 10
+        },
+        {
+          "name": "dismissTranslationDialog",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 10
+        },
+        {
+          "name": "skipPrevious",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 10
+        },
+        {
+          "name": "dismissEvaluation",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 10
+        },
+        {
+          "name": "clearQueue",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 10
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 29.0,
+      "projected_delta": 1,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "clearVadAttempted",
+          "file": "app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt",
+          "length": 29
+        },
+        {
+          "name": "clearAnchors",
+          "file": "app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt",
+          "length": 29
+        }
+      ]
+    },
+    {
+      "size": 3,
+      "avg_length": 19.0,
+      "projected_delta": 7,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "localizedLabel",
+          "file": "app/src/main/java/com/example/data/model/Song.kt",
+          "length": 19
+        },
+        {
+          "name": "localized",
+          "file": "app/src/main/java/com/example/data/model/Song.kt",
+          "length": 19
+        },
+        {
+          "name": "localizedReason",
+          "file": "app/src/main/java/com/example/data/model/Song.kt",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 28.0,
+      "projected_delta": 2,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "createPlaylist",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 28
+        },
+        {
+          "name": "addSongsToPlaylist",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 28
+        }
+      ]
+    },
+    {
+      "size": 3,
+      "avg_length": 17.0,
+      "projected_delta": 11,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "resetAllRanks",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 17
+        },
+        {
+          "name": "deleteAllSongs",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 17
+        },
+        {
+          "name": "removeDefaultSeedSongs",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "size": 3,
+      "avg_length": 17.0,
+      "projected_delta": 11,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "fastFade",
+          "file": "app/src/main/java/com/example/ui/theme/Motion.kt",
+          "length": 17
+        },
+        {
+          "name": "standardEnter",
+          "file": "app/src/main/java/com/example/ui/theme/Motion.kt",
+          "length": 17
+        },
+        {
+          "name": "standardExit",
+          "file": "app/src/main/java/com/example/ui/theme/Motion.kt",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "size": 5,
+      "avg_length": 9.0,
+      "projected_delta": 39,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "clearCache",
+          "file": "app/src/main/java/com/example/player/ReplayGainProvider.kt",
+          "length": 9
+        },
+        {
+          "name": "setABLoopStart",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 9
+        },
+        {
+          "name": "setABLoopEnd",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 9
+        },
+        {
+          "name": "clearABLoop",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 9
+        },
+        {
+          "name": "restartCurrentSong",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 9
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 21.0,
+      "projected_delta": 9,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "deletePlaylist",
+          "file": "app/src/main/java/com/example/data/repository/PlaylistRepository.kt",
+          "length": 21
+        },
+        {
+          "name": "deleteSong",
+          "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+          "length": 21
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 21.0,
+      "projected_delta": 9,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "clearSongSelection",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 21
+        },
+        {
+          "name": "selectNoneTagCleanup",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 21
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 17.0,
+      "projected_delta": 13,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "simulateQuickSkip",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 17
+        },
+        {
+          "name": "simulateModerateListen",
+          "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+          "length": 17
+        }
+      ]
+    }
+  ],
+  "largest_files": [
+    {
+      "file": "app/src/main/java/com/example/ui/viewmodel/MusicPlayerViewModel.kt",
+      "bytes": 33632,
+      "units": 96
+    },
+    {
+      "file": "app/src/main/java/com/example/player/SmartAudioPlayer.kt",
+      "bytes": 49930,
+      "units": 54
+    },
+    {
+      "file": "app/src/main/java/com/example/data/cleanup/TagCleaner.kt",
+      "bytes": 15390,
+      "units": 33
+    },
+    {
+      "file": "app/src/main/java/com/example/data/repository/SongRepository.kt",
+      "bytes": 17775,
+      "units": 23
+    },
+    {
+      "file": "app/src/main/java/com/example/player/PlaybackService.kt",
+      "bytes": 16356,
+      "units": 16
+    },
+    {
+      "file": "app/src/main/java/com/example/util/FileLogger.kt",
+      "bytes": 3236,
+      "units": 11
+    },
+    {
+      "file": "app/src/main/java/com/example/data/preferences/PlaybackPreferences.kt",
+      "bytes": 4899,
+      "units": 10
+    },
+    {
+      "file": "app/src/main/java/com/example/data/lyrics/LyricsService.kt",
+      "bytes": 13605,
+      "units": 9
+    },
+    {
+      "file": "app/src/main/java/com/example/data/health/PerfTracker.kt",
+      "bytes": 2339,
+      "units": 8
+    },
+    {
+      "file": "app/src/main/java/com/example/data/lyrics/LyricAutoAligner.kt",
+      "bytes": 10344,
+      "units": 7
+    }
+  ]
+}
