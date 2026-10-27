@@ -1,0 +1,75 @@
+{
+  "patch": "D1",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "total_units": 54,
+  "clusterable_units": 53,
+  "pairs_compared": 16,
+  "pairs_matched_at_threshold": 3,
+  "threshold_d_lambda": 2,
+  "clusters_found": 3,
+  "worth_extracting_clusters": 1,
+  "b2_baseline_groups": 3,
+  "discovery_multiplier": 1.0,
+  "total_units_in_clusters": 6,
+  "total_worth_units": 2,
+  "total_potential_savings_tokens": 29,
+  "clusters": [
+    {
+      "members": [
+        "U027",
+        "U028"
+      ],
+      "names": [
+        "add",
+        "remove"
+      ],
+      "size": 2,
+      "avg_length": 59.0,
+      "orig_tokens": 118,
+      "projected_new_tokens": 89,
+      "projected_delta": -29,
+      "worth_extracting": true,
+      "kind_mix": [
+        "method"
+      ]
+    },
+    {
+      "members": [
+        "U010",
+        "U025"
+      ],
+      "names": [
+        "toJSON",
+        "previousAttributes"
+      ],
+      "size": 2,
+      "avg_length": 15.0,
+      "orig_tokens": 30,
+      "projected_new_tokens": 45,
+      "projected_delta": 15,
+      "worth_extracting": false,
+      "kind_mix": [
+        "method"
+      ]
+    },
+    {
+      "members": [
+        "U011",
+        "U031"
+      ],
+      "names": [
+        "get",
+        "at"
+      ],
+      "size": 2,
+      "avg_length": 14.0,
+      "orig_tokens": 28,
+      "projected_new_tokens": 44,
+      "projected_delta": 16,
+      "worth_extracting": false,
+      "kind_mix": [
+        "method"
+      ]
+    }
+  ]
+}

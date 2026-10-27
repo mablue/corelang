@@ -1,0 +1,55 @@
+id,name,kind,parent,is_wrapper,start_line,end_line,body_lines,span_bytes,body_sha256,sig_first
+U001,<anon@6>,anonymous,,True,6,619,614,,c89bfface1450262a5f240638b56f0c6194bcf1994ccd762419e5de171f85163,function(){
+U002,inherits,assignment,,False,27,37,11,,0b7a3ecddc2ef3403f131663e0413d824328a70e676831d80c24a2d6ca8874fe,"function(parent, protoProps, classProps) {"
+U003,<anon@29>,anonymous,inherits,False,29,29,1,,5aa83663fe1b5162472dbbd0e409289c174ff77664db9b94b683d06979e2646b,"function(){ return parent.apply(this, arguments); }"
+U004,ctor,assignment,inherits,False,30,30,1,,5ef5d1ac865d5989c69073dafa4c847fa199f1777c72dfb16a5d61104b6bc6f3,function(){}
+U005,getUrl,assignment,,False,41,43,3,,65c6fc955ffb06cc7ef4556b00c1197330f0aa8411a402ad1834b7cb7addcb9d,function(object) {
+U006,bind,method,,False,61,66,6,,44e4e7929b8a0aecaa639b685d2efd359bd44b4ef46b8cfaa581f5ca925d2e40,"function(ev, callback) {"
+U007,unbind,method,,False,71,90,20,,f924452c0cbdc7cd65ee83506cf3c036fd910b8fa4226d367ef2c07812ec5ba8,"function(ev, callback) {"
+U008,trigger,method,,False,95,110,16,,81facb30792dfa3923deb862dfd0fae2669e3ff0f955fe734ea5ef0fde1d7947,function(ev) {
+U009,Backbone.Model,assignment,,False,119,124,6,,09a8a0a9507729d6f3285b5f4bc8e11fc282b9cb92ac1d4cf81b314579356f2b,function(attributes) {
+U010,toJSON,method,,False,137,139,3,,ad28fba7d1171f30ad9abf63ebc7e8e2083787a50c00c91c80241846f7c45f3b,function() {
+U011,get,method,,False,142,144,3,,7fd70ff633232779f6bbde6741396893fe1a8ad4892bacea5414c53cae3ec9d1,function(attr) {
+U012,set,method,,False,148,184,37,,1cb1db6df6b7634ad56e398ac85eccda6f04b31eb8624b1f481be686aab16fdf,"function(attrs, options) {"
+U013,unset,method,,False,188,198,11,,13fc888775ba2dcb41c40eb74958854d3c3212e53673e55e1c0136e93b7e4d2c,"function(attr, options) {"
+U014,save,method,,False,203,215,13,,4d0199d8c9c53eff95e788491ec496707b6ed741b21979b827c6bc632054cd56,"function(attrs, options) {"
+U015,success,assignment,save,False,208,211,4,,1e224b3327c6daae104f6d6183caba1025375e01925292832a0053776cb08a4f,function(resp) {
+U016,destroy,method,,False,219,228,10,,416b51805de665c282fafeb3debe7d0cc0f416ac20f95862a5d8c4fe86d546ae,function(options) {
+U017,success,assignment,destroy,False,222,225,4,,6124122acf5a961900b5cc0a7b0f91e02cdb4f5cba3b3082c9c1cc6052a50164,function(resp) {
+U018,url,method,,False,233,237,5,,c1dd316343cd7f64f3b220403962c4a0f375c7292a9cad7d1cd9d92a9a86cd0e,function() {
+U019,clone,method,,False,240,242,3,,0cc58c7383b8a1232bd6a96dbdda3e4d969497f906bb9419f71d49aeb4864faf,function() {
+U020,isNew,method,,False,246,248,3,,a10a29c56fe9298c3e219835b9f58853f3c6a01747da1b557fb09fbf452faf6a,function() {
+U021,change,method,,False,252,256,5,,820a245b2399a1997a3600879dc0934767c4b0d04276ffed5fea2467110fee6a,function() {
+U022,hasChanged,method,,False,260,263,4,,0b1f27360f108261609e884d7e7cbcba459e255b28785ff9dc243ddcf91ba01a,function(attr) {
+U023,changedAttributes,method,,False,269,278,10,,0495d4726f01f3fd2f4ed9e89955f6843f75fa1ee4485ab5efe7fe458b7b36b6,function(now) {
+U024,previous,method,,False,282,285,4,,0e629f799e710119d08e6b0ff412f419efe7268b2099e5cc68feddfc1fdc1ad6,function(attr) {
+U025,previousAttributes,method,,False,289,291,3,,0423ac77be09093164ad0065aae226a89637b2cab9907cc567ba1e42fa5d9ebc,function() {
+U026,Backbone.Collection,assignment,,False,301,310,10,,8b7508375fe1bff5ea94c51c10dddc87630c5366df601a5302ed3c554ebe6a25,"function(models, options) {"
+U027,add,method,,False,319,323,5,,940a27133ef86ad1c25ececd74e384842ca8d13724b0508f7b780b7c652c58ff,"function(models, options) {"
+U028,remove,method,,False,327,331,5,,4f4b5ab240522f49bdd45da98258278f5c8001cd6e87912ee895de47e16d10d5,"function(models, options) {"
+U029,get,method,,False,334,336,3,,d3ea32945ce30a33c1697b6359e83fabb7560f1f7aa341a21906d471f2cd8e84,function(id) {
+U030,getByCid,method,,False,339,341,3,,1fbdd2537d164e5a89f09bfab90a1db12c768564d29a44bdbb45e84360c9947a,function(cid) {
+U031,at,method,,False,344,346,3,,66bce49a128f885ab34adae4a453afd0888da6d2cc294cdfb3a539fde8a977ad,function(index) {
+U032,sort,method,,False,350,356,7,,0778100cb63379018f2b3bbfdc3df80074dfcd16eb7876389c47a2568e9d1521,function(options) {
+U033,pluck,method,,False,359,361,3,,1ea366ae5d6fca031938f36722e9cc7d4e876b3d39b261da3fc64894505a5bd2,function(attr) {
+U034,<anon@360>,anonymous,pluck,False,360,360,1,,442fcfd56c7c8d532ba77c6f179d4936bddf5ad1232ea8f8fa77cdaef541a53a,function(model){ return model.get(attr); }
+U035,refresh,method,,False,366,379,14,,c151675fbc7dbbfcef5d9f298bb9b7b3e972435d1cfb42d76f0ad19a29ad6166,"function(models, options) {"
+U036,<anon@371>,anonymous,refresh,False,371,373,3,,15f0606b04188d764d706e7e8e5c86ae917b0836a28a02e84889e4c12c4eef80,"function(attrs, i) {"
+U037,fetch,method,,False,383,392,10,,3eb728b9f638db343855c346082c06ee6a7f2989a88c6b2c39d90339cab495b2,function(options) {
+U038,success,assignment,fetch,False,386,389,4,,8e5e08aa60f9d1a55fb158b7d4a81bc24da7eea973d240770da81d249e48155d,function(resp) {
+U039,create,method,,False,396,406,11,,3707aa37a3b9d1f7a533b51fcc1a4525f7c73dccd79aa29b23de2e6c56b96060,"function(model, options) {"
+U040,success,assignment,create,False,400,404,5,,653fe6d1fadb4881d983d1cd393b5c111e41e65cbb1c20bc50b9431a3c6e55d7,function(resp) {
+U041,_initialize,method,,False,410,415,6,,f6278c17aef4a333e6051759edfee18ca11a3e471016b47643cf4c0b01343d2d,function(options) {
+U042,_add,method,,False,419,432,14,,7632f7b8f1e4321086d6df73ca7500f7d884babc1a3d14debca942fc5e48a0e2,"function(model, options) {"
+U043,_remove,method,,False,436,448,13,,cb3fca54bcf75196163245d00817315abb4e68fd69ab654f4293c6fcd56698c8,"function(model, options) {"
+U044,_onModelEvent,method,,False,452,464,13,,dfd8b5b4b9cabba29a934451da2cac95666e268cc869dc72b0eff3dc87c02639,"function(ev, model, error) {"
+U045,<anon@475>,anonymous,,False,475,479,5,,b881ed9dbb8a3e7740a50b0d74974639ddfd375bd38cffe23fcb69949c5c8036,function(method) {
+U046,<anon@476>,anonymous,,False,476,478,3,,c7444aa615cde7c4c99a1c5c28176c474b53dd409921f7eec3f8612262dcbbcd,function() {
+U047,Backbone.View,assignment,,False,486,497,12,,611544ec8d2bd9ab26c30d787549452645c7e0b0dcdaa5c4d0b157f748e9510a,function(options) {
+U048,jQueryDelegate,assignment,,False,502,504,3,,0eb0c3e9133f72df7473b37b837888f5232ca4bdb9537fbe264dbc43cb491c89,function(selector) {
+U049,render,method,,False,522,524,3,,2ca0a0b138e719e555fabd32a380c034e849b21191990076f6261deadd311986,function() {
+U050,make,method,,False,531,536,6,,9db8f7a6405c603f2f2c5c671909af6afd9a2a1cebede313b57a8cc8f82998fb,"function(tagName, attributes, content) {"
+U051,handleEvents,method,,False,552,567,16,,e2df6f7818dc17d8fcc1ec79c377605ffd0575cd4b211a8fd5f733ce9da6802b,function(events) {
+U052,_initialize,method,,False,572,580,9,,841988d709a472c933195dd5723f25079f31da9b85acdb0aa5e14953427236ec,function(options) {
+U053,Backbone.View.extend,assignment,,False,585,589,5,,dfdea864b0d7f216a523d13006946ff0efe23a455262fdefce3ae1992c1e7782,"function (protoProps, classProps) {"
+U054,Backbone.sync,assignment,,False,608,617,10,,000fd307002c5d42c0c710db0b7d983d82cc0aa0f9531d6d46c9182170391f35,"function(method, model, success, error) {"

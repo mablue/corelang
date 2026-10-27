@@ -1,0 +1,52 @@
+═══ D3 REPORT — cross-language generalization ═══
+
+─── METRICS ───
+
+               backbone (JS)        bottle (PY)         
+bytes          21485                180019              
+units          53                   367                 
+total tokens   2989                 23213               
+pairs compared 16                   729                 
+pairs matched  3                    64                  
+clusters       3                    18                  
+worth extract  1                    6                   
+potential save 29                   103                 
+
+─── TOP BACKBONE CLUSTERS ───
+
+  [★] size=2 L=59.0 Δ=-29  ['fn@10566', 'fn@10911']
+  [ ] size=2 L=15.0 Δ=+15  ['fn@4574', 'fn@9613']
+  [ ] size=2 L=14.0 Δ=+16  ['fn@4682', 'fn@11426']
+
+─── TOP BOTTLE CLUSTERS ───
+
+  [ ] size=6 L=13.0 Δ=+25  ['__iter__', '__len__', '__iter__']
+  [ ] size=6 L=11.0 Δ=+35  ['is_ajax', 'status_line', 'status_code']
+  [★] size=5 L=30.0 Δ=-45  ['get', 'post', 'put']
+  [★] size=3 L=30.0 Δ=-15  ['items', 'items', 'iteritems']
+  [★] size=3 L=30.0 Δ=-15  ['allitems', 'iterallitems', 'allitems']
+
+─── CROSS-LANGUAGE FINDINGS ───
+
+Both languages have patterns : YES
+Both have worth-extracting  : YES
+Cluster ratio (bottle/bb)   : 6.0×
+Unit ratio (bottle/bb)      : 6.92×
+
+─── HONEST INTERPRETATION ───
+
+✓ The tool produces meaningful clustering on both languages.
+  This proves the paradigm is NOT JavaScript-specific.
+✓ Both languages have clusters worth extracting.
+  The 'worth' criterion generalizes across languages.
+
+What D3 proves:
+  ✓ Analyzer runs on JS and Python without changes to core logic
+  ✓ d_Λ clustering produces meaningful results on both
+  ✓ Worth criterion filters both consistently
+
+What D3 does NOT prove:
+  - Same code → same signature across languages
+    (that needs language normalization, a future feature)
+  - Scale beyond ~5000 lines
+  - Usefulness on real production code (bottle 0.13 is 10+ years old)

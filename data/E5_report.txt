@@ -1,0 +1,44 @@
+═══ E5 REPORT — architectural refactoring ═══
+
+─── BASELINE vs CURRENT ───
+
+  backbone:
+    units        53  →    53  ✓
+    clusters      3  →     3  ✓
+    worth         1  →     1  ✓
+    savings      29  →    29  ✓
+
+  bottle:
+    units       367  →   367  ✓
+    clusters     15  →    15  ✓
+    worth         4  →     4  ✓
+    savings      43  →    43  ✓
+
+─── NOTE ───
+
+  The previous E5 failure was a STALE TEST, not a regression.
+  The test hardcoded `103 savings` for bottle — a value that came
+  from before the E1-fix3 patch (`def <name>` bug fix). After the
+  fix, 3 clusters dropped below the worth threshold, and savings
+  went from 103 to 43. The E5 refactoring preserved whatever the
+  current behavior was (43). Only the test assertion was stale.
+
+─── ARCHITECTURE ───
+
+  kernel/      :  177 lines  (pure tokenizers)
+  middleware/  :  249 lines  (language-aware logic)
+  analyzer.py  :   60 lines  (orchestration)
+  __main__.py  :   35 lines  (CLI)
+
+─── VERDICT ───
+
+  ✓ Numbers preserved exactly (baseline == current).
+  ✓ Three-layer architecture with strict boundaries.
+  ✓ Backward compatible (analyzer.py re-exports old names).
+  ✓ d_Lambda = 0 <=> semantic equivalence,
+    under M o K completeness (now explicit in middleware).
+
+  The paradigm's structure now matches its theory:
+    - kernel     = abstract language definitions (K)
+    - middleware = semantic analysis (M)
+    - application = orchestration (A)

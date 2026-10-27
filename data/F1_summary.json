@@ -1,0 +1,1216 @@
+{
+  "patch": "F1",
+  "target": "Bitcoin v0.1.5",
+  "files_analyzed": 26,
+  "total_units": 1002,
+  "total_tokens": 91749,
+  "pairs_compared": 13459,
+  "pairs_matched": 7362,
+  "clusters_found": 75,
+  "worth_extracting": 23,
+  "potential_savings": 466,
+  "top_clusters": [
+    {
+      "size": 117,
+      "avg_length": 14.0,
+      "orig_tokens": 1638,
+      "projected_new_tokens": 1769,
+      "projected_delta": 131,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnIdle",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMouseEvents",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnPaint",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMenuFileExit",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMenuOptionsGenerate",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMenuOptionsOptions",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMenuHelpAbout",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSend",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonAddressBook",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMouseEventsAddress",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnSetFocusAddress",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCopy",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonChange",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListColBeginDrag",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivatedAllTransactions",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnPaintListCtrl",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivatedOrdersSent",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivatedProductsSent",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivatedOrdersReceived",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKillFocusTransactionFee",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnTextAddress",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonPaste",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonAddressBook",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKillFocusAmount",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSend",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnPaint",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListEndLabelEdit",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivated",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemSelected",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonRename",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonNew",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCopy",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListEndLabelEdit",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivated",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemSelected",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonEdit",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonNew",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDelete",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCombobox",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSearch",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivated",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel0",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel1",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel2",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel3",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel4",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel5",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel6",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel7",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel8",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel9",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel10",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel11",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel12",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel13",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel14",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel15",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel16",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel17",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel18",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDel19",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonAddField",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSend",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonPreview",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSubmitForm",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancelForm",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonBack",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonNext",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonSubmit",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnTreeSelChanged",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemActivated",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnListItemSelected",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonNewTable",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnMouseEvents",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnPaint",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnSize",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckSitOut",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonDealHand",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonFold",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCall",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonRaise",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonLeaveTable",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnDitchPlayer",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckPreFold",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckPreCall",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckPreCallAny",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckPreRaise",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnCheckPreRaiseAny",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnClose",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnKeyDown",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonOK",
+          "file": "src/uibase.h",
+          "length": 14
+        },
+        {
+          "name": "OnButtonCancel",
+          "file": "src/uibase.h",
+          "length": 14
+        }
+      ]
+    },
+    {
+      "size": 20,
+      "avg_length": 17.0,
+      "orig_tokens": 340,
+      "projected_new_tokens": 317,
+      "projected_delta": -23,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "CEditProductDialog::OnButtonDel0",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel1",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel2",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel3",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel4",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel5",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel6",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel7",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel8",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel9",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel10",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel11",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel12",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel13",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel14",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel15",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel16",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel17",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel18",
+          "file": "src/ui.cpp",
+          "length": 17
+        },
+        {
+          "name": "CEditProductDialog::OnButtonDel19",
+          "file": "src/ui.cpp",
+          "length": 17
+        }
+      ]
+    },
+    {
+      "size": 8,
+      "avg_length": 26.0,
+      "orig_tokens": 208,
+      "projected_new_tokens": 146,
+      "projected_delta": -62,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        },
+        {
+          "name": "Unserialize",
+          "file": "src/serialize.h",
+          "length": 26
+        }
+      ]
+    },
+    {
+      "size": 8,
+      "avg_length": 25.0,
+      "orig_tokens": 200,
+      "projected_new_tokens": 145,
+      "projected_delta": -55,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        },
+        {
+          "name": "Serialize",
+          "file": "src/serialize.h",
+          "length": 25
+        }
+      ]
+    },
+    {
+      "size": 10,
+      "avg_length": 19.0,
+      "orig_tokens": 190,
+      "projected_new_tokens": 169,
+      "projected_delta": -21,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/main.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/net.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/net.h",
+          "length": 19
+        },
+        {
+          "name": "print",
+          "file": "src/script.h",
+          "length": 19
+        }
+      ]
+    },
+    {
+      "size": 8,
+      "avg_length": 20.0,
+      "orig_tokens": 160,
+      "projected_new_tokens": 140,
+      "projected_delta": -20,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        },
+        {
+          "name": "GetSerializeSize",
+          "file": "src/serialize.h",
+          "length": 20
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 71.0,
+      "orig_tokens": 142,
+      "projected_new_tokens": 101,
+      "projected_delta": -41,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "GetBlockIndex",
+          "file": "src/main.h",
+          "length": 71
+        },
+        {
+          "name": "GetBlockHash",
+          "file": "src/main.h",
+          "length": 71
+        }
+      ]
+    },
+    {
+      "size": 3,
+      "avg_length": 42.0,
+      "orig_tokens": 126,
+      "projected_new_tokens": 87,
+      "projected_delta": -39,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "AddPendingReplyEvent1",
+          "file": "src/ui.cpp",
+          "length": 42
+        },
+        {
+          "name": "AddPendingReplyEvent2",
+          "file": "src/ui.cpp",
+          "length": 42
+        },
+        {
+          "name": "AddPendingReplyEvent3",
+          "file": "src/ui.cpp",
+          "length": 42
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 61.0,
+      "orig_tokens": 122,
+      "projected_new_tokens": 91,
+      "projected_delta": -31,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "push_int64",
+          "file": "src/script.h",
+          "length": 61
+        },
+        {
+          "name": "push_uint64",
+          "file": "src/script.h",
+          "length": 61
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 59.0,
+      "orig_tokens": 118,
+      "projected_new_tokens": 89,
+      "projected_delta": -29,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "CYourAddressDialog::OnListEndLabelEdit",
+          "file": "src/ui.cpp",
+          "length": 59
+        },
+        {
+          "name": "CAddressBookDialog::OnListEndLabelEdit",
+          "file": "src/ui.cpp",
+          "length": 59
+        }
+      ]
+    },
+    {
+      "size": 4,
+      "avg_length": 29.0,
+      "orig_tokens": 116,
+      "projected_new_tokens": 89,
+      "projected_delta": -27,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "CBigNum",
+          "file": "src/bignum.h",
+          "length": 29
+        },
+        {
+          "name": "CBigNum",
+          "file": "src/bignum.h",
+          "length": 29
+        },
+        {
+          "name": "CBigNum",
+          "file": "src/bignum.h",
+          "length": 29
+        },
+        {
+          "name": "CBigNum",
+          "file": "src/bignum.h",
+          "length": 29
+        }
+      ]
+    },
+    {
+      "size": 8,
+      "avg_length": 14.0,
+      "orig_tokens": 112,
+      "projected_new_tokens": 134,
+      "projected_delta": 22,
+      "worth_extracting": false,
+      "members": [
+        {
+          "name": "CTxDetailsDialog::OnButtonOK",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "COptionsDialog::OnButtonCancel",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CAboutDialog::OnButtonOK",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CEditProductDialog::OnButtonCancel",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CViewProductDialog::OnButtonCancelForm",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CViewProductDialog::OnButtonCancel",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CViewOrderDialog::OnButtonOK",
+          "file": "src/ui.cpp",
+          "length": 14
+        },
+        {
+          "name": "CEditReviewDialog::OnButtonCancel",
+          "file": "src/ui.cpp",
+          "length": 14
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 54.0,
+      "orig_tokens": 108,
+      "projected_new_tokens": 84,
+      "projected_delta": -24,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "uint160",
+          "file": "src/uint256.h",
+          "length": 54
+        },
+        {
+          "name": "uint256",
+          "file": "src/uint256.h",
+          "length": 54
+        }
+      ]
+    },
+    {
+      "size": 4,
+      "avg_length": 25.0,
+      "orig_tokens": 100,
+      "projected_new_tokens": 85,
+      "projected_delta": -15,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "CReviewDB",
+          "file": "src/db.h",
+          "length": 25
+        },
+        {
+          "name": "CMarketDB",
+          "file": "src/db.h",
+          "length": 25
+        },
+        {
+          "name": "CAddrDB",
+          "file": "src/db.h",
+          "length": 25
+        },
+        {
+          "name": "CWalletDB",
+          "file": "src/db.h",
+          "length": 25
+        }
+      ]
+    },
+    {
+      "size": 2,
+      "avg_length": 50.0,
+      "orig_tokens": 100,
+      "projected_new_tokens": 80,
+      "projected_delta": -20,
+      "worth_extracting": true,
+      "members": [
+        {
+          "name": "uint160",
+          "file": "src/uint256.h",
+          "length": 50
+        },
+        {
+          "name": "uint256",
+          "file": "src/uint256.h",
+          "length": 50
+        }
+      ]
+    }
+  ],
+  "largest_files": [
+    {
+      "file": "src/ui.cpp",
+      "bytes": 93957,
+      "units": 174
+    },
+    {
+      "file": "src/serialize.h",
+      "bytes": 38727,
+      "units": 160
+    },
+    {
+      "file": "src/uibase.h",
+      "bytes": 27052,
+      "units": 117
+    },
+    {
+      "file": "src/main.h",
+      "bytes": 31895,
+      "units": 96
+    },
+    {
+      "file": "src/net.h",
+      "bytes": 20541,
+      "units": 55
+    },
+    {
+      "file": "src/main.cpp",
+      "bytes": 80398,
+      "units": 54
+    },
+    {
+      "file": "src/bignum.h",
+      "bytes": 13598,
+      "units": 35
+    },
+    {
+      "file": "src/db.h",
+      "bytes": 10559,
+      "units": 33
+    },
+    {
+      "file": "src/uibase.cpp",
+      "bytes": 106488,
+      "units": 32
+    },
+    {
+      "file": "src/script.h",
+      "bytes": 17110,
+      "units": 29
+    }
+  ]
+}

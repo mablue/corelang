@@ -1,0 +1,29 @@
+═══ C1 REPORT ═══
+
+source: /data/data/com.termux/files/home/corelang/workspace/source/backbone.js
+source_sha256: 6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae
+groups analyzed: 3
+true duplicates: 0
+pattern instances: 3
+
+─── ['U010', 'U025']  ['toJSON', 'previousAttributes'] ───
+  class           : pattern_instance
+  token_count     : 15
+  parameter_count : 1 (logical: 1)
+  skeleton        : function ( ) { return _ . clone ( this . @P0 ) ; }
+  param @11    : ID  ['attributes', '_previousAttributes']  positions=[11]
+
+─── ['U011', 'U031']  ['get', 'at'] ───
+  class           : pattern_instance
+  token_count     : 14
+  parameter_count : 3 (logical: 2)
+  skeleton        : function ( @P0 ) { return this . @P1 [ @P2 ] ; }
+  param @2    : ID  ['attr', 'index']  positions=[2, 10]
+  param @8    : ID  ['attributes', 'models']  positions=[8]
+
+─── ['U027', 'U028']  ['add', 'remove'] ───
+  class           : pattern_instance
+  token_count     : 59
+  parameter_count : 2 (logical: 1)
+  skeleton        : function ( models , options ) { if ( ! _ . isArray ( models ) ) return this . @P0 ( models , options ) ; for ( var i = 0 ; i < models . length ; i ++ ) this . @P1 ( models [ i ] , options ) ; return models ; }
+  param @20    : ID  ['_add', '_remove']  positions=[20, 45]

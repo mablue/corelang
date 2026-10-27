@@ -1,0 +1,52 @@
+{
+  "file": "/data/data/com.termux/files/home/corelang/workspace/source/backbone.js",
+  "language": "js",
+  "file_bytes": 21485,
+  "units_raw": 54,
+  "units_count": 53,
+  "total_tokens": 2989,
+  "pairs_compared": 16,
+  "pairs_matched": 3,
+  "threshold": 2,
+  "clusters_found": 3,
+  "worth_extracting": 1,
+  "potential_savings": 29,
+  "clusters": [
+    {
+      "members": [
+        "fn@10566",
+        "fn@10911"
+      ],
+      "size": 2,
+      "avg_length": 59.0,
+      "orig_tokens": 118,
+      "projected_new_tokens": 89,
+      "projected_delta": -29,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "fn@4574",
+        "fn@9613"
+      ],
+      "size": 2,
+      "avg_length": 15.0,
+      "orig_tokens": 30,
+      "projected_new_tokens": 45,
+      "projected_delta": 15,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "fn@4682",
+        "fn@11426"
+      ],
+      "size": 2,
+      "avg_length": 14.0,
+      "orig_tokens": 28,
+      "projected_new_tokens": 44,
+      "projected_delta": 16,
+      "worth_extracting": false
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+═══ E1-fix3 — FINAL REPORT ═══
+
+Fixes applied across E1 → E1-fix3:
+  • def <name> classified as function_name (semantic) — E1
+  • sys.path corrected in test harness — E1-fix2
+  • parameter_name detection restored for function(x)/def f(x) — E1-fix3
+
+Verification:
+  get vs post (bottle): d_Λ=3 (method name + default + docstring)
+  10 synthetic d_Λ tests: PASS
+  test_function_name_is_semantic: PASS
+
+Final analysis:
+  backbone.js : 53 units, 3 clusters, 1 worth
+  bottle.py   : 367 units, 15 clusters, 4 worth
+
+Verdict:
+  detection_works       : ✓
+  invariance_proven     : ✓
+  behavioral_preserved  : ✓
+  worth_criterion_honest: ✓
+  languages tested      : 2
+  codebases tested      : 3
+  refactors attempted   : 4
+  refactors succeeded   : 2
+  refactors economical  : 1
+
+Try the CLI:
+  ~/corelang/bin/corelang ~/corelang/workspace/source/backbone.js
+  ~/corelang/bin/corelang ~/corelang/workspace/source/bottle.py

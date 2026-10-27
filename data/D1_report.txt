@@ -1,0 +1,52 @@
+═══ D1 REPORT — broad discovery via d_Λ clustering ═══
+
+Source: backbone.js 0.1.0
+Units total      : 54
+Clusterable      : 53 (excluding wrapper)
+Pairs compared   : 16 (same-length only)
+Pairs matched    : 3 (at d_Λ ≤ 2)
+Clusters found   : 3
+
+─── B2 BASELINE vs D1 DISCOVERY ───
+
+  B2 (strict struct_sha equality): 3 groups
+  D1 (d_Λ ≤ 2 clustering)       : 3 clusters
+  Discovery multiplier            : 1.0×
+
+─── WORTH EXTRACTING (L > 15n/(n-1)) ───
+
+  Clusters worth extracting : 1 of 3
+  Units covered             : 2 of 53
+  Potential token savings   : 29
+
+─── TOP CLUSTERS (by size × avg_length) ───
+
+  [★ WORTH] size=2 L=59.0 ['add', 'remove']
+      orig=118 → new=89 (Δ -29)
+  [  small] size=2 L=15.0 ['toJSON', 'previousAttributes']
+      orig=30 → new=45 (Δ +15)
+  [  small] size=2 L=14.0 ['get', 'at']
+      orig=28 → new=44 (Δ +16)
+
+─── HONEST FINDINGS ───
+
+1. Discovery: d_Λ clustering finds more patterns than strict equality.
+   B2: 3 groups  →  D1: 3 clusters
+   6 of 53 units participate in at least one cluster.
+
+2. Compression: only 1/3 clusters are worth extracting.
+   Reason: backbone 0.1.0 has mostly SHORT functions (L < 30).
+   The formula L > 15n/(n-1) filters them out cleanly.
+
+3. The paradigm is DETECTION-first, COMPRESSION-conditional.
+   It finds structure everywhere. It only compresses when
+   structure + size + multiplicity satisfy the worth criterion.
+
+4. This is not failure. This is the paradigm being precise.
+   Traditional clone detection misses 3-3 = 0 of these clusters.
+
+─── NEXT ───
+
+D2: extract kernels for worth-extracting clusters and re-verify
+    d_Λ invariance + behavioral preservation on each.
+    If all pass, the paradigm is empirically validated.

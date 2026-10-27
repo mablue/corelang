@@ -1,0 +1,135 @@
+{
+  "patch": "D0-fix",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "per_group": [
+    {
+      "label": "get/at",
+      "functions": [
+        "get",
+        "at"
+      ],
+      "kernel": "_lookupField",
+      "kernel_tokens": 8,
+      "kernel_lines": 1,
+      "orig_tokens": 28,
+      "adapter_tokens": 36,
+      "new_total_tokens": 44,
+      "delta_tokens": 16,
+      "delta_pct": 57.1,
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "semantic_decisions": 1,
+      "alpha_params": 1,
+      "params": [
+        {
+          "a": "attr",
+          "b": "index",
+          "pos": [
+            2,
+            14
+          ],
+          "ctx": [
+            "parameter_name",
+            "unknown"
+          ],
+          "class": "alpha",
+          "type": "ID"
+        },
+        {
+          "a": "attributes",
+          "b": "models",
+          "pos": [
+            12
+          ],
+          "ctx": [
+            "field_access"
+          ],
+          "class": "semantic",
+          "type": "ID"
+        }
+      ]
+    },
+    {
+      "label": "toJSON/previousAttributes",
+      "functions": [
+        "toJSON",
+        "prev"
+      ],
+      "kernel": "_cloneField",
+      "kernel_tokens": 67,
+      "kernel_lines": 6,
+      "orig_tokens": 30,
+      "adapter_tokens": 30,
+      "new_total_tokens": 97,
+      "delta_tokens": 67,
+      "delta_pct": 223.3,
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "semantic_decisions": 1,
+      "alpha_params": 0,
+      "params": [
+        {
+          "a": "attributes",
+          "b": "_previousAttributes",
+          "pos": [
+            11
+          ],
+          "ctx": [
+            "field_access"
+          ],
+          "class": "semantic",
+          "type": "ID"
+        }
+      ]
+    },
+    {
+      "label": "add/remove",
+      "functions": [
+        "add",
+        "remove"
+      ],
+      "kernel": "_iterate",
+      "kernel_tokens": 55,
+      "kernel_lines": 5,
+      "orig_tokens": 118,
+      "adapter_tokens": 40,
+      "new_total_tokens": 95,
+      "delta_tokens": -23,
+      "delta_pct": -19.5,
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "semantic_decisions": 1,
+      "alpha_params": 0,
+      "params": [
+        {
+          "a": "_add",
+          "b": "_remove",
+          "pos": [
+            12
+          ],
+          "ctx": [
+            "literal"
+          ],
+          "class": "semantic",
+          "type": "STR"
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "total_orig_tokens": 176,
+    "total_new_tokens": 236,
+    "delta_tokens": 60,
+    "delta_pct": 34.1,
+    "kernels": 3,
+    "adapters": 6,
+    "leverage_adapters_per_kernel": 2.0,
+    "semantic_decisions_exposed": 3,
+    "all_invariant": true,
+    "all_behavioral_pass": true,
+    "behavioral_checks": 18
+  }
+}

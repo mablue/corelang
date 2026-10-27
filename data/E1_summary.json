@@ -1,0 +1,34 @@
+{
+  "patch": "E1-fix3",
+  "tool_version": "0.1.0",
+  "fixes_applied": [
+    "def <name> classified as function_name (semantic) — E1",
+    "sys.path corrected in test harness — E1-fix2",
+    "parameter_name detection restored for function(x)/def f(x) — E1-fix3"
+  ],
+  "backbone": {
+    "language": "js",
+    "units_count": 53,
+    "clusters_found": 3,
+    "worth_extracting": 1,
+    "potential_savings": 29
+  },
+  "bottle": {
+    "language": "py",
+    "units_count": 367,
+    "clusters_found": 15,
+    "worth_extracting": 4,
+    "potential_savings": 43
+  },
+  "verdict": {
+    "detection_works": true,
+    "invariance_proven": true,
+    "behavioral_preserved": true,
+    "worth_criterion_honest": true,
+    "languages_tested": 2,
+    "codebases_tested": 3,
+    "total_refactors_attempted": 4,
+    "total_refactors_successful": 2,
+    "total_refactors_economical": 1
+  }
+}

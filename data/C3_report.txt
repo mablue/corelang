@@ -1,0 +1,22 @@
+═══ C3 REPORT (with _ shim) ═══
+
+Behavioral tests: PASS (18 checks, 0 failures)
+d_Λ invariance  : PASS (3/3)
+
+─── get/at ───
+  original   : 14+14 tokens  d_Λ=1
+  refactored : 18+18 tokens  d_Λ=1
+  invariant  : YES
+    [ALPHA   ] 'attr' vs 'index'  positions=[2, 14]
+    [SEMANTIC] 'attributes' vs 'models'  positions=[12]
+
+─── toJSON/previousAttributes ───
+  original   : 15+15 tokens  d_Λ=1
+  refactored : 15+15 tokens  d_Λ=1
+  invariant  : YES
+    [SEMANTIC] 'attributes' vs '_previousAttributes'  positions=[11]
+
+─── add/remove ───
+  original   : 59+59 tokens  d_Λ=1
+  refactored : 20+20 tokens  d_Λ=1
+  invariant  : YES

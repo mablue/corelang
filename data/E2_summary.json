@@ -1,0 +1,1165 @@
+{
+  "patch": "E2-fix",
+  "old_method": {
+    "backbone_clusters": 3,
+    "bottle_clusters": 15
+  },
+  "new_method": {
+    "backbone": {
+      "0.5": {
+        "clusters": 8,
+        "units_clustered": 25,
+        "pairs_compared": 766,
+        "levi_calls": 40,
+        "clusters_detail": [
+          {
+            "size": 7,
+            "names": [
+              "fn@1047",
+              "fn@1115",
+              "fn@4574",
+              "fn@7818",
+              "fn@7986"
+            ],
+            "avg_norm_len": 11.0
+          },
+          {
+            "size": 4,
+            "names": [
+              "fn@6486",
+              "fn@7081",
+              "fn@12933",
+              "fn@13416"
+            ],
+            "avg_norm_len": 86.2
+          },
+          {
+            "size": 4,
+            "names": [
+              "fn@6672",
+              "fn@7178",
+              "fn@13035",
+              "fn@13604"
+            ],
+            "avg_norm_len": 34.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@4682",
+              "fn@11426"
+            ],
+            "avg_norm_len": 13.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@8514",
+              "fn@9361"
+            ],
+            "avg_norm_len": 26.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@10566",
+              "fn@10911"
+            ],
+            "avg_norm_len": 54.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@14239",
+              "fn@14966"
+            ],
+            "avg_norm_len": 114.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@16399",
+              "fn@16462"
+            ],
+            "avg_norm_len": 38.5
+          }
+        ]
+      },
+      "0.6": {
+        "clusters": 7,
+        "units_clustered": 16,
+        "pairs_compared": 591,
+        "levi_calls": 17,
+        "clusters_detail": [
+          {
+            "size": 4,
+            "names": [
+              "fn@6672",
+              "fn@7178",
+              "fn@13035",
+              "fn@13604"
+            ],
+            "avg_norm_len": 34.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@1115",
+              "fn@17971"
+            ],
+            "avg_norm_len": 6.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@4574",
+              "fn@9613"
+            ],
+            "avg_norm_len": 14.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@7081",
+              "fn@12933"
+            ],
+            "avg_norm_len": 68.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@10566",
+              "fn@10911"
+            ],
+            "avg_norm_len": 54.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@14239",
+              "fn@14966"
+            ],
+            "avg_norm_len": 114.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@16399",
+              "fn@16462"
+            ],
+            "avg_norm_len": 38.5
+          }
+        ]
+      },
+      "0.7": {
+        "clusters": 4,
+        "units_clustered": 9,
+        "pairs_compared": 412,
+        "levi_calls": 8,
+        "clusters_detail": [
+          {
+            "size": 3,
+            "names": [
+              "fn@6672",
+              "fn@7178",
+              "fn@13604"
+            ],
+            "avg_norm_len": 36.7
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@4574",
+              "fn@9613"
+            ],
+            "avg_norm_len": 14.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@7081",
+              "fn@12933"
+            ],
+            "avg_norm_len": 68.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@10566",
+              "fn@10911"
+            ],
+            "avg_norm_len": 54.0
+          }
+        ]
+      },
+      "0.8": {
+        "clusters": 4,
+        "units_clustered": 8,
+        "pairs_compared": 300,
+        "levi_calls": 4,
+        "clusters_detail": [
+          {
+            "size": 2,
+            "names": [
+              "fn@4574",
+              "fn@9613"
+            ],
+            "avg_norm_len": 14.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@6672",
+              "fn@13604"
+            ],
+            "avg_norm_len": 38.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@7081",
+              "fn@12933"
+            ],
+            "avg_norm_len": 68.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "fn@10566",
+              "fn@10911"
+            ],
+            "avg_norm_len": 54.0
+          }
+        ]
+      }
+    },
+    "bottle": {
+      "0.5": {
+        "clusters": 32,
+        "units_clustered": 144,
+        "pairs_compared": 36376,
+        "levi_calls": 241,
+        "clusters_detail": [
+          {
+            "size": 35,
+            "names": [
+              "get_config",
+              "get_header",
+              "get",
+              "__getitem__",
+              "__delitem__"
+            ],
+            "avg_norm_len": 22.5
+          },
+          {
+            "size": 20,
+            "names": [
+              "headers",
+              "is_ajax",
+              "copy",
+              "__iter__",
+              "__len__"
+            ],
+            "avg_norm_len": 11.8
+          },
+          {
+            "size": 9,
+            "names": [
+              "values",
+              "items",
+              "allitems",
+              "values",
+              "items"
+            ],
+            "avg_norm_len": 27.0
+          },
+          {
+            "size": 6,
+            "names": [
+              "path",
+              "method",
+              "chunked",
+              "query_string",
+              "content_type"
+            ],
+            "avg_norm_len": 22.0
+          },
+          {
+            "size": 6,
+            "names": [
+              "run",
+              "run",
+              "run",
+              "run",
+              "run"
+            ],
+            "avg_norm_len": 40.3
+          },
+          {
+            "size": 5,
+            "names": [
+              "__call__",
+              "__init__",
+              "__init__",
+              "__init__",
+              "__init__"
+            ],
+            "avg_norm_len": 21.6
+          },
+          {
+            "size": 5,
+            "names": [
+              "get",
+              "post",
+              "put",
+              "delete",
+              "patch"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "auth_basic",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 77.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "view",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 78.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "__get__",
+              "__get__",
+              "__get__"
+            ],
+            "avg_norm_len": 43.3
+          },
+          {
+            "size": 3,
+            "names": [
+              "hook",
+              "_add_change_listener",
+              "decorator"
+            ],
+            "avg_norm_len": 19.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "_mount_wsgi",
+              "mountpoint_wrapper",
+              "start_response"
+            ],
+            "avg_norm_len": 163.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "__setitem__",
+              "_set_virtual",
+              "_delete_virtual"
+            ],
+            "avg_norm_len": 77.3
+          },
+          {
+            "size": 3,
+            "names": [
+              "render",
+              "render",
+              "render"
+            ],
+            "avg_norm_len": 51.3
+          },
+          {
+            "size": 3,
+            "names": [
+              "utcoffset",
+              "tzname",
+              "dst"
+            ],
+            "avg_norm_len": 11.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "tob",
+              "touni"
+            ],
+            "avg_norm_len": 37.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "make_default_app_wrapper",
+              "wrapper"
+            ],
+            "avg_norm_len": 35.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__set__",
+              "__delete__"
+            ],
+            "avg_norm_len": 31.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__repr__",
+              "__repr__"
+            ],
+            "avg_norm_len": 27.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "add_hook",
+              "remove_hook"
+            ],
+            "avg_norm_len": 39.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "close",
+              "close"
+            ],
+            "avg_norm_len": 22.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "route",
+              "decorator"
+            ],
+            "avg_norm_len": 112.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "error",
+              "decorator"
+            ],
+            "avg_norm_len": 42.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "route",
+              "url_args"
+            ],
+            "avg_norm_len": 11.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "forms",
+              "files"
+            ],
+            "avg_norm_len": 47.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__getattr__",
+              "__delattr__"
+            ],
+            "avg_norm_len": 35.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__init__",
+              "__init__"
+            ],
+            "avg_norm_len": 44.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "apply",
+              "wrapper"
+            ],
+            "avg_norm_len": 95.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "find_spec",
+              "find_module"
+            ],
+            "avg_norm_len": 42.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "run",
+              "fixed_environ"
+            ],
+            "avg_norm_len": 32.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "run",
+              "run"
+            ],
+            "avg_norm_len": 120.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "get_event_loop",
+              "get_event_loop"
+            ],
+            "avg_norm_len": 13.0
+          }
+        ]
+      },
+      "0.6": {
+        "clusters": 27,
+        "units_clustered": 90,
+        "pairs_compared": 28775,
+        "levi_calls": 123,
+        "clusters_detail": [
+          {
+            "size": 10,
+            "names": [
+              "__iter__",
+              "__len__",
+              "keys",
+              "__iter__",
+              "__len__"
+            ],
+            "avg_norm_len": 12.5
+          },
+          {
+            "size": 9,
+            "names": [
+              "values",
+              "items",
+              "allitems",
+              "values",
+              "items"
+            ],
+            "avg_norm_len": 27.0
+          },
+          {
+            "size": 7,
+            "names": [
+              "__getitem__",
+              "__delitem__",
+              "__getitem__",
+              "__delitem__",
+              "__getitem__"
+            ],
+            "avg_norm_len": 17.4
+          },
+          {
+            "size": 6,
+            "names": [
+              "__setitem__",
+              "set_header",
+              "__setitem__",
+              "replace",
+              "__setitem__"
+            ],
+            "avg_norm_len": 23.0
+          },
+          {
+            "size": 5,
+            "names": [
+              "get",
+              "post",
+              "put",
+              "delete",
+              "patch"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 5,
+            "names": [
+              "get_header",
+              "get",
+              "get_header",
+              "raw",
+              "get_header"
+            ],
+            "avg_norm_len": 25.6
+          },
+          {
+            "size": 4,
+            "names": [
+              "__contains__",
+              "__contains__",
+              "__contains__",
+              "__contains__"
+            ],
+            "avg_norm_len": 15.8
+          },
+          {
+            "size": 3,
+            "names": [
+              "auth_basic",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 77.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "view",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 78.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "__call__",
+              "__init__",
+              "__init__"
+            ],
+            "avg_norm_len": 27.3
+          },
+          {
+            "size": 3,
+            "names": [
+              "add_header",
+              "append",
+              "append"
+            ],
+            "avg_norm_len": 29.7
+          },
+          {
+            "size": 2,
+            "names": [
+              "__set__",
+              "__delete__"
+            ],
+            "avg_norm_len": 31.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "hook",
+              "decorator"
+            ],
+            "avg_norm_len": 20.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "route",
+              "url_args"
+            ],
+            "avg_norm_len": 11.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "forms",
+              "files"
+            ],
+            "avg_norm_len": 47.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "chunked",
+              "content_type"
+            ],
+            "avg_norm_len": 22.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "status_line",
+              "_get_status"
+            ],
+            "avg_norm_len": 9.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__init__",
+              "__init__"
+            ],
+            "avg_norm_len": 44.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "apply",
+              "wrapper"
+            ],
+            "avg_norm_len": 95.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "find_spec",
+              "find_module"
+            ],
+            "avg_norm_len": 42.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "getall",
+              "getall"
+            ],
+            "avg_norm_len": 21.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__setitem__",
+              "__delitem__"
+            ],
+            "avg_norm_len": 17.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__setitem__",
+              "_set_virtual"
+            ],
+            "avg_norm_len": 87.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "meta_get",
+              "meta_list"
+            ],
+            "avg_norm_len": 28.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "get_event_loop",
+              "get_event_loop"
+            ],
+            "avg_norm_len": 13.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "render",
+              "render"
+            ],
+            "avg_norm_len": 46.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "utcoffset",
+              "dst"
+            ],
+            "avg_norm_len": 12.0
+          }
+        ]
+      },
+      "0.7": {
+        "clusters": 24,
+        "units_clustered": 68,
+        "pairs_compared": 21500,
+        "levi_calls": 65,
+        "clusters_detail": [
+          {
+            "size": 5,
+            "names": [
+              "get",
+              "post",
+              "put",
+              "delete",
+              "patch"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 4,
+            "names": [
+              "__getitem__",
+              "__getitem__",
+              "__getitem__",
+              "__getitem__"
+            ],
+            "avg_norm_len": 18.5
+          },
+          {
+            "size": 4,
+            "names": [
+              "__iter__",
+              "__iter__",
+              "__iter__",
+              "__iter__"
+            ],
+            "avg_norm_len": 12.0
+          },
+          {
+            "size": 4,
+            "names": [
+              "__contains__",
+              "__contains__",
+              "__contains__",
+              "__contains__"
+            ],
+            "avg_norm_len": 15.8
+          },
+          {
+            "size": 4,
+            "names": [
+              "__setitem__",
+              "set_header",
+              "__setitem__",
+              "replace"
+            ],
+            "avg_norm_len": 25.2
+          },
+          {
+            "size": 3,
+            "names": [
+              "auth_basic",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 77.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "view",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 78.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "__len__",
+              "__len__",
+              "__len__"
+            ],
+            "avg_norm_len": 12.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "keys",
+              "keys",
+              "iterkeys"
+            ],
+            "avg_norm_len": 13.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "__delitem__",
+              "__delitem__",
+              "__delitem__"
+            ],
+            "avg_norm_len": 16.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "add_header",
+              "append",
+              "append"
+            ],
+            "avg_norm_len": 29.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "values",
+              "values",
+              "itervalues"
+            ],
+            "avg_norm_len": 23.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "items",
+              "items",
+              "iteritems"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "allitems",
+              "iterallitems",
+              "allitems"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__set__",
+              "__delete__"
+            ],
+            "avg_norm_len": 31.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "get_header",
+              "get_header"
+            ],
+            "avg_norm_len": 23.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "forms",
+              "files"
+            ],
+            "avg_norm_len": 47.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "apply",
+              "wrapper"
+            ],
+            "avg_norm_len": 95.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "find_spec",
+              "find_module"
+            ],
+            "avg_norm_len": 42.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "getall",
+              "getall"
+            ],
+            "avg_norm_len": 21.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__setitem__",
+              "__delitem__"
+            ],
+            "avg_norm_len": 17.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "get_event_loop",
+              "get_event_loop"
+            ],
+            "avg_norm_len": 13.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "render",
+              "render"
+            ],
+            "avg_norm_len": 46.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "utcoffset",
+              "dst"
+            ],
+            "avg_norm_len": 12.0
+          }
+        ]
+      },
+      "0.8": {
+        "clusters": 18,
+        "units_clustered": 43,
+        "pairs_compared": 15067,
+        "levi_calls": 34,
+        "clusters_detail": [
+          {
+            "size": 4,
+            "names": [
+              "__iter__",
+              "__iter__",
+              "__iter__",
+              "__iter__"
+            ],
+            "avg_norm_len": 12.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "auth_basic",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 77.7
+          },
+          {
+            "size": 3,
+            "names": [
+              "view",
+              "decorator",
+              "wrapper"
+            ],
+            "avg_norm_len": 78.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "values",
+              "values",
+              "itervalues"
+            ],
+            "avg_norm_len": 23.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "items",
+              "items",
+              "iteritems"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 3,
+            "names": [
+              "allitems",
+              "iterallitems",
+              "allitems"
+            ],
+            "avg_norm_len": 29.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__set__",
+              "__delete__"
+            ],
+            "avg_norm_len": 31.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "get_header",
+              "get_header"
+            ],
+            "avg_norm_len": 23.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__len__",
+              "__len__"
+            ],
+            "avg_norm_len": 12.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "keys",
+              "keys"
+            ],
+            "avg_norm_len": 13.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__setitem__",
+              "set_header"
+            ],
+            "avg_norm_len": 25.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__contains__",
+              "__contains__"
+            ],
+            "avg_norm_len": 14.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__delitem__",
+              "__delitem__"
+            ],
+            "avg_norm_len": 15.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "__getitem__",
+              "__getitem__"
+            ],
+            "avg_norm_len": 19.5
+          },
+          {
+            "size": 2,
+            "names": [
+              "getall",
+              "getall"
+            ],
+            "avg_norm_len": 21.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "__setitem__",
+              "replace"
+            ],
+            "avg_norm_len": 25.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "render",
+              "render"
+            ],
+            "avg_norm_len": 46.0
+          },
+          {
+            "size": 2,
+            "names": [
+              "utcoffset",
+              "dst"
+            ],
+            "avg_norm_len": 12.0
+          }
+        ]
+      }
+    }
+  },
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "file": "/data/data/com.termux/files/home/corelang/workspace/source/bottle.py",
+  "language": "py",
+  "file_bytes": 180019,
+  "units_raw": 367,
+  "units_count": 367,
+  "total_tokens": 23213,
+  "pairs_compared": 729,
+  "pairs_matched": 64,
+  "threshold": 2,
+  "clusters_found": 18,
+  "worth_extracting": 6,
+  "potential_savings": 103,
+  "clusters": [
+    {
+      "members": [
+        "__iter__",
+        "__len__",
+        "__iter__",
+        "__len__",
+        "__iter__",
+        "__iter__"
+      ],
+      "size": 6,
+      "avg_length": 13.0,
+      "orig_tokens": 78,
+      "projected_new_tokens": 103,
+      "projected_delta": 25,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "is_ajax",
+        "status_line",
+        "status_code",
+        "iter_headers",
+        "__call__",
+        "get_syntax"
+      ],
+      "size": 6,
+      "avg_length": 11.0,
+      "orig_tokens": 66,
+      "projected_new_tokens": 101,
+      "projected_delta": 35,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "get",
+        "post",
+        "put",
+        "delete",
+        "patch"
+      ],
+      "size": 5,
+      "avg_length": 30.0,
+      "orig_tokens": 150,
+      "projected_new_tokens": 105,
+      "projected_delta": -45,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "items",
+        "items",
+        "iteritems"
+      ],
+      "size": 3,
+      "avg_length": 30.0,
+      "orig_tokens": 90,
+      "projected_new_tokens": 75,
+      "projected_delta": -15,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "allitems",
+        "iterallitems",
+        "allitems"
+      ],
+      "size": 3,
+      "avg_length": 30.0,
+      "orig_tokens": 90,
+      "projected_new_tokens": 75,
+      "projected_delta": -15,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "__setitem__",
+        "__setitem__",
+        "replace"
+      ],
+      "size": 3,
+      "avg_length": 26.0,
+      "orig_tokens": 78,
+      "projected_new_tokens": 71,
+      "projected_delta": -7,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "values",
+        "values",
+        "itervalues"
+      ],
+      "size": 3,
+      "avg_length": 24.0,
+      "orig_tokens": 72,
+      "projected_new_tokens": 69,
+      "projected_delta": -3,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "keys",
+        "keys",
+        "iterkeys"
+      ],
+      "size": 3,
+      "avg_length": 14.0,
+      "orig_tokens": 42,
+      "projected_new_tokens": 59,
+      "projected_delta": 17,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "app",
+        "route",
+        "url_args"
+      ],
+      "size": 3,
+      "avg_length": 12.0,
+      "orig_tokens": 36,
+      "projected_new_tokens": 57,
+      "projected_delta": 21,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "render",
+        "render"
+      ],
+      "size": 2,
+      "avg_length": 48.0,
+      "orig_tokens": 96,
+      "projected_new_tokens": 78,
+      "projected_delta": -18,
+      "worth_extracting": true
+    },
+    {
+      "members": [
+        "get_header",
+        "get_header"
+      ],
+      "size": 2,
+      "avg_length": 24.0,
+      "orig_tokens": 48,
+      "projected_new_tokens": 54,
+      "projected_delta": 6,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "__getitem__",
+        "__getitem__"
+      ],
+      "size": 2,
+      "avg_length": 22.0,
+      "orig_tokens": 44,
+      "projected_new_tokens": 52,
+      "projected_delta": 8,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "__delitem__",
+        "__delitem__"
+      ],
+      "size": 2,
+      "avg_length": 18.0,
+      "orig_tokens": 36,
+      "projected_new_tokens": 48,
+      "projected_delta": 12,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "__contains__",
+        "__contains__"
+      ],
+      "size": 2,
+      "avg_length": 17.0,
+      "orig_tokens": 34,
+      "projected_new_tokens": 47,
+      "projected_delta": 13,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "__getitem__",
+        "__delitem__"
+      ],
+      "size": 2,
+      "avg_length": 15.0,
+      "orig_tokens": 30,
+      "projected_new_tokens": 45,
+      "projected_delta": 15,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "get_event_loop",
+        "get_event_loop"
+      ],
+      "size": 2,
+      "avg_length": 14.0,
+      "orig_tokens": 28,
+      "projected_new_tokens": 44,
+      "projected_delta": 16,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "utcoffset",
+        "dst"
+      ],
+      "size": 2,
+      "avg_length": 13.0,
+      "orig_tokens": 26,
+      "projected_new_tokens": 43,
+      "projected_delta": 17,
+      "worth_extracting": false
+    },
+    {
+      "members": [
+        "exec_module",
+        "run"
+      ],
+      "size": 2,
+      "avg_length": 9.0,
+      "orig_tokens": 18,
+      "projected_new_tokens": 39,
+      "projected_delta": 21,
+      "worth_extracting": false
+    }
+  ]
+}

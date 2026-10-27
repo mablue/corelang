@@ -1,0 +1,240 @@
+{
+  "patch": "C2",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "synthetic_tests": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "details": [
+      {
+        "name": "identity_no_diff",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "alpha_renaming",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "alpha_in_field",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "name": "operator_differs",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "name": "numeric_literal",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "name": "string_literal",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "name": "field_access",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "name": "field_and_alpha",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "name": "two_fields",
+        "expected": 2,
+        "actual": 2,
+        "passed": true
+      },
+      {
+        "name": "method_differs",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      }
+    ]
+  },
+  "real_groups": [
+    {
+      "unit_ids": [
+        "U010",
+        "U025"
+      ],
+      "names": [
+        "toJSON",
+        "previousAttributes"
+      ],
+      "d_lambda": 1,
+      "num_differing_positions": 1,
+      "num_alpha_params": 0,
+      "num_semantic_params": 1,
+      "params": [
+        {
+          "val_a": "attributes",
+          "val_b": "_previousAttributes",
+          "positions": [
+            11
+          ],
+          "contexts": [
+            "field_access"
+          ],
+          "classification": "semantic"
+        }
+      ]
+    },
+    {
+      "unit_ids": [
+        "U011",
+        "U031"
+      ],
+      "names": [
+        "get",
+        "at"
+      ],
+      "d_lambda": 1,
+      "num_differing_positions": 3,
+      "num_alpha_params": 1,
+      "num_semantic_params": 1,
+      "params": [
+        {
+          "val_a": "attr",
+          "val_b": "index",
+          "positions": [
+            2,
+            10
+          ],
+          "contexts": [
+            "index_key",
+            "parameter_name"
+          ],
+          "classification": "alpha"
+        },
+        {
+          "val_a": "attributes",
+          "val_b": "models",
+          "positions": [
+            8
+          ],
+          "contexts": [
+            "field_access"
+          ],
+          "classification": "semantic"
+        }
+      ]
+    },
+    {
+      "unit_ids": [
+        "U027",
+        "U028"
+      ],
+      "names": [
+        "add",
+        "remove"
+      ],
+      "d_lambda": 1,
+      "num_differing_positions": 2,
+      "num_alpha_params": 0,
+      "num_semantic_params": 1,
+      "params": [
+        {
+          "val_a": "_add",
+          "val_b": "_remove",
+          "positions": [
+            20,
+            45
+          ],
+          "contexts": [
+            "field_access"
+          ],
+          "classification": "semantic"
+        }
+      ]
+    }
+  ],
+  "theorem_checks": {
+    "zero_implies_equal": {
+      "tested_on": [
+        {
+          "name": "identity_no_diff",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "alpha_renaming",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "name": "alpha_in_field",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    },
+    "positive_implies_different": {
+      "tested_on": [
+        {
+          "name": "operator_differs",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "numeric_literal",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "string_literal",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "field_access",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "field_and_alpha",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "name": "two_fields",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "name": "method_differs",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    }
+  }
+}

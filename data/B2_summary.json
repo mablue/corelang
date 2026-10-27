@@ -1,0 +1,55 @@
+{
+  "patch": "B2",
+  "units_count": 54,
+  "total_tokens": 6158,
+  "distinct_struct_sha": 51,
+  "duplicate_groups_count": 3,
+  "duplicate_groups": [
+    {
+      "struct_sha256": "0f31a12c897587f12373d44dbb5213bf0516c36ebb705f1a5fe8b70ce17209d0",
+      "count": 2,
+      "ids": [
+        "U010",
+        "U025"
+      ],
+      "names": [
+        "toJSON",
+        "previousAttributes"
+      ],
+      "bodies_differ": true,
+      "token_count": 15
+    },
+    {
+      "struct_sha256": "7d99836e10b3665a00b5b47f05d3d4969ab79af4638565869b360768666b2892",
+      "count": 2,
+      "ids": [
+        "U011",
+        "U031"
+      ],
+      "names": [
+        "get",
+        "at"
+      ],
+      "bodies_differ": true,
+      "token_count": 14
+    },
+    {
+      "struct_sha256": "db1bf394ac82e9fc666d147528ded71bd9e22f600647c67acdb97d65ed20a241",
+      "count": 2,
+      "ids": [
+        "U027",
+        "U028"
+      ],
+      "names": [
+        "add",
+        "remove"
+      ],
+      "bodies_differ": true,
+      "token_count": 59
+    }
+  ],
+  "sigma": {
+    "kw_count": 19,
+    "sym_count": 26
+  }
+}

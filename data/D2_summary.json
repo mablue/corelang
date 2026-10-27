@@ -1,0 +1,28 @@
+{
+  "patch": "D2",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "patched_sha256": "81fbf67b6186ee205d5188d3bf91ba380e51087df81220c881d9608344d1c09f",
+  "metrics": {
+    "orig_lines": 618,
+    "patched_lines": 617,
+    "delta_lines": -1,
+    "diff_hunks_lines": 38,
+    "kernel_loc": 6,
+    "adapter_loc": 2,
+    "lines_saved_net": 4,
+    "behavioral_checks": 18,
+    "d_lambda_invariance": true
+  },
+  "kernel": {
+    "name": "_iterate",
+    "purpose": "dispatch single vs array over _add/_remove",
+    "adapters": [
+      "add",
+      "remove"
+    ],
+    "leverage": 2
+  },
+  "refactor_type": "behaviorally_equivalent",
+  "diff_path": "/data/data/com.termux/files/home/corelang/dumps/D2_refactor.diff",
+  "patched_path": "/data/data/com.termux/files/home/corelang/tmp/d2/backbone_patched.js"
+}

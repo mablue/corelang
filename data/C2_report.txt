@@ -1,0 +1,35 @@
+═══ C2 REPORT — Kernel Distance d_Λ ═══
+source_sha256: 6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae
+
+─── SYNTHETIC TESTS (10/10 passed) ───
+
+  ✓ identity_no_diff     d_Λ=0  (expected 0)
+  ✓ alpha_renaming       d_Λ=0  (expected 0)
+  ✓ alpha_in_field       d_Λ=0  (expected 0)
+  ✓ operator_differs     d_Λ=1  (expected 1)
+  ✓ numeric_literal      d_Λ=1  (expected 1)
+  ✓ string_literal       d_Λ=1  (expected 1)
+  ✓ field_access         d_Λ=1  (expected 1)
+  ✓ field_and_alpha      d_Λ=1  (expected 1)
+  ✓ two_fields           d_Λ=2  (expected 2)
+  ✓ method_differs       d_Λ=1  (expected 1)
+
+─── REAL GROUPS (3) ───
+
+Group: ['U010', 'U025'] ['toJSON', 'previousAttributes']
+  d_Λ = 1  (alpha params: 0, semantic params: 1)
+  [SEMANTIC] 'attributes'           vs '_previousAttributes'   positions=[11]  contexts=[field_access]
+
+Group: ['U011', 'U031'] ['get', 'at']
+  d_Λ = 1  (alpha params: 1, semantic params: 1)
+  [ALPHA   ] 'attr'                 vs 'index'                 positions=[2, 10]  contexts=[index_key,parameter_name]
+  [SEMANTIC] 'attributes'           vs 'models'                positions=[8]  contexts=[field_access]
+
+Group: ['U027', 'U028'] ['add', 'remove']
+  d_Λ = 1  (alpha params: 0, semantic params: 1)
+  [SEMANTIC] '_add'                 vs '_remove'               positions=[20, 45]  contexts=[field_access]
+
+─── THEOREM CHECKS ───
+
+  d_Λ = 0  ⟹  semantically equal     : PASS  (3 tests)
+  d_Λ > 0  ⟹  semantically different : PASS  (7 tests)

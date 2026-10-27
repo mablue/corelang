@@ -1,0 +1,64 @@
+═══ D0 DASHBOARD — what the paradigm actually delivers ═══
+
+Source: backbone.js 0.1.0 (618 lines, 21485 bytes, 54 units)
+Groups analyzed: 3
+
+─── PER-GROUP ───
+
+Group: get/at  (_lookupField)
+  original   : 28 tokens  (d_Λ=1)
+  refactored : 36 adapter + 8 kernel = 44  (d_Λ=1, invariant=YES)
+  Δ tokens   : +16 (+57.1%)
+  decisions  : 1 semantic, 1 alpha
+    [ALPHA   ] 'attr' vs 'index'  type=ID  pos=[2, 14]
+    [SEMANTIC] 'attributes' vs 'models'  type=ID  pos=[12]
+
+Group: toJSON/previousAttributes  (_cloneField)
+  original   : 30 tokens  (d_Λ=1)
+  refactored : 30 adapter + 67 kernel = 97  (d_Λ=1, invariant=YES)
+  Δ tokens   : +67 (+223.3%)
+  decisions  : 1 semantic, 0 alpha
+    [SEMANTIC] 'attributes' vs '_previousAttributes'  type=ID  pos=[11]
+
+Group: add/remove  (_iterate)
+  original   : 118 tokens  (d_Λ=1)
+  refactored : 40 adapter + 55 kernel = 95  (d_Λ=1, invariant=YES)
+  Δ tokens   : -23 (-19.5%)
+  decisions  : 1 semantic, 0 alpha
+    [SEMANTIC] '_add' vs '_remove'  type=STR  pos=[12]
+
+─── AGGREGATE ───
+
+Total original tokens : 176
+Total refactored      : 236 (Δ +60, +34.1%)
+Kernels               : 3
+Adapters              : 6
+Leverage              : 2.0 adapters/kernel
+Decisions exposed     : 3
+Behavioral            : PASS (18 checks)
+Invariance            : PASS (3/3)
+
+─── HONEST ASSESSMENT ───
+
+Compression is not uniform:
+  get/at                       +57.1%  (expansion)
+  toJSON/previousAttributes    +223.3%  (expansion)
+  add/remove                   -19.5%  (compression)
+
+The paradigm does NOT guarantee compression.
+What it actually guarantees:
+  ✓ Behavioral preservation
+  ✓ d_Λ invariance across refactoring
+  ✓ Explicit semantic decisions (parameters)
+  ✓ Reusable kernels (leverage)
+  ✓ Single point of change per pattern
+
+Real metric: leverage × invariance, not compression.
+
+─── NEXT (D1) ───
+
+The 3 groups above all had leverage=2.
+D1 will apply the same pipeline to ALL 54 units to find:
+  - patterns with leverage ≥ 3 (e.g. success:function(resp) ×4)
+  - kernels serving multiple patterns
+  - true cumulative compression at leverage ≥ 3

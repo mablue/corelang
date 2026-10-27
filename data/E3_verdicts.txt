@@ -1,0 +1,23 @@
+# Verdicts — fill in after reading E3_clusters_to_inspect.txt
+#
+# Format: CLUSTER_ID: REAL | PARTIAL | NOISE — optional notes
+
+CLUSTER  1 (bottle, size=9, avg_sim=0.67): 
+
+CLUSTER  2 (bottle, size=3, avg_sim=0.81): 
+
+CLUSTER  3 (bottle, size=3, avg_sim=0.77): 
+
+CLUSTER  4 (backbone, size=2, avg_sim=0.63): 
+
+CLUSTER  5 (bottle, size=2, avg_sim=0.73): 
+
+CLUSTER  6 (bottle, size=2, avg_sim=0.62): 
+
+CLUSTER  7 (bottle, size=5, avg_sim=0.90): 
+
+CLUSTER  8 (backbone, size=4, avg_sim=0.70): 
+
+CLUSTER  9 (bottle, size=6, avg_sim=0.70): 
+
+CLUSTER 10 (backbone, size=2, avg_sim=0.80): 

@@ -1,0 +1,256 @@
+{
+  "patch": "C1",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "groups": [
+    {
+      "struct_sha256": "0f31a12c897587f12373d44dbb5213bf0516c36ebb705f1a5fe8b70ce17209d0",
+      "unit_ids": [
+        "U010",
+        "U025"
+      ],
+      "names": [
+        "toJSON",
+        "previousAttributes"
+      ],
+      "token_count": 15,
+      "parameter_count": 1,
+      "logical_parameter_count": 1,
+      "classification": "pattern_instance",
+      "skeleton": [
+        "KW:function",
+        "SYM:(",
+        "SYM:)",
+        "SYM:{",
+        "KW:return",
+        "ID:_",
+        "SYM:.",
+        "ID:clone",
+        "SYM:(",
+        "KW:this",
+        "SYM:.",
+        "ID:@P0",
+        "SYM:)",
+        "SYM:;",
+        "SYM:}"
+      ],
+      "skeleton_rendered": "function ( ) { return _ . clone ( this . @P0 ) ; }",
+      "parameters": [
+        {
+          "pos": 11,
+          "type": "ID",
+          "values": [
+            "attributes",
+            "_previousAttributes"
+          ],
+          "context": "field_access"
+        }
+      ],
+      "logical_parameters": [
+        {
+          "positions": [
+            11
+          ],
+          "type": "ID",
+          "values": [
+            "attributes",
+            "_previousAttributes"
+          ]
+        }
+      ]
+    },
+    {
+      "struct_sha256": "7d99836e10b3665a00b5b47f05d3d4969ab79af4638565869b360768666b2892",
+      "unit_ids": [
+        "U011",
+        "U031"
+      ],
+      "names": [
+        "get",
+        "at"
+      ],
+      "token_count": 14,
+      "parameter_count": 3,
+      "logical_parameter_count": 2,
+      "classification": "pattern_instance",
+      "skeleton": [
+        "KW:function",
+        "SYM:(",
+        "ID:@P0",
+        "SYM:)",
+        "SYM:{",
+        "KW:return",
+        "KW:this",
+        "SYM:.",
+        "ID:@P1",
+        "SYM:[",
+        "ID:@P2",
+        "SYM:]",
+        "SYM:;",
+        "SYM:}"
+      ],
+      "skeleton_rendered": "function ( @P0 ) { return this . @P1 [ @P2 ] ; }",
+      "parameters": [
+        {
+          "pos": 2,
+          "type": "ID",
+          "values": [
+            "attr",
+            "index"
+          ],
+          "context": "call_argument"
+        },
+        {
+          "pos": 8,
+          "type": "ID",
+          "values": [
+            "attributes",
+            "models"
+          ],
+          "context": "field_access"
+        },
+        {
+          "pos": 10,
+          "type": "ID",
+          "values": [
+            "attr",
+            "index"
+          ],
+          "context": "index_key"
+        }
+      ],
+      "logical_parameters": [
+        {
+          "positions": [
+            2,
+            10
+          ],
+          "type": "ID",
+          "values": [
+            "attr",
+            "index"
+          ]
+        },
+        {
+          "positions": [
+            8
+          ],
+          "type": "ID",
+          "values": [
+            "attributes",
+            "models"
+          ]
+        }
+      ]
+    },
+    {
+      "struct_sha256": "db1bf394ac82e9fc666d147528ded71bd9e22f600647c67acdb97d65ed20a241",
+      "unit_ids": [
+        "U027",
+        "U028"
+      ],
+      "names": [
+        "add",
+        "remove"
+      ],
+      "token_count": 59,
+      "parameter_count": 2,
+      "logical_parameter_count": 1,
+      "classification": "pattern_instance",
+      "skeleton": [
+        "KW:function",
+        "SYM:(",
+        "ID:models",
+        "SYM:,",
+        "ID:options",
+        "SYM:)",
+        "SYM:{",
+        "KW:if",
+        "SYM:(",
+        "SYM:!",
+        "ID:_",
+        "SYM:.",
+        "ID:isArray",
+        "SYM:(",
+        "ID:models",
+        "SYM:)",
+        "SYM:)",
+        "KW:return",
+        "KW:this",
+        "SYM:.",
+        "ID:@P0",
+        "SYM:(",
+        "ID:models",
+        "SYM:,",
+        "ID:options",
+        "SYM:)",
+        "SYM:;",
+        "KW:for",
+        "SYM:(",
+        "KW:var",
+        "ID:i",
+        "SYM:=",
+        "NUM:0",
+        "SYM:;",
+        "ID:i",
+        "SYM:<",
+        "ID:models",
+        "SYM:.",
+        "ID:length",
+        "SYM:;",
+        "ID:i",
+        "SYM:++",
+        "SYM:)",
+        "KW:this",
+        "SYM:.",
+        "ID:@P1",
+        "SYM:(",
+        "ID:models",
+        "SYM:[",
+        "ID:i",
+        "SYM:]",
+        "SYM:,",
+        "ID:options",
+        "SYM:)",
+        "SYM:;",
+        "KW:return",
+        "ID:models",
+        "SYM:;",
+        "SYM:}"
+      ],
+      "skeleton_rendered": "function ( models , options ) { if ( ! _ . isArray ( models ) ) return this . @P0 ( models , options ) ; for ( var i = 0 ; i < models . length ; i ++ ) this . @P1 ( models [ i ] , options ) ; return models ; }",
+      "parameters": [
+        {
+          "pos": 20,
+          "type": "ID",
+          "values": [
+            "_add",
+            "_remove"
+          ],
+          "context": "field_access"
+        },
+        {
+          "pos": 45,
+          "type": "ID",
+          "values": [
+            "_add",
+            "_remove"
+          ],
+          "context": "field_access"
+        }
+      ],
+      "logical_parameters": [
+        {
+          "positions": [
+            20,
+            45
+          ],
+          "type": "ID",
+          "values": [
+            "_add",
+            "_remove"
+          ]
+        }
+      ]
+    }
+  ]
+}

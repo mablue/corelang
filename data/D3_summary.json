@@ -1,0 +1,146 @@
+{
+  "patch": "D3",
+  "backbone": {
+    "language": "js",
+    "file_bytes": 21485,
+    "units_count": 53,
+    "total_tokens": 2989,
+    "pairs_compared": 16,
+    "pairs_matched": 3,
+    "clusters_found": 3,
+    "worth_extracting": 1,
+    "potential_savings": 29
+  },
+  "bottle": {
+    "language": "py",
+    "file_bytes": 180019,
+    "units_count": 367,
+    "total_tokens": 23213,
+    "pairs_compared": 729,
+    "pairs_matched": 64,
+    "clusters_found": 18,
+    "worth_extracting": 6,
+    "potential_savings": 103
+  },
+  "top_clusters": {
+    "backbone": [
+      {
+        "members": [
+          "fn@10566",
+          "fn@10911"
+        ],
+        "size": 2,
+        "avg_length": 59.0,
+        "orig_tokens": 118,
+        "projected_new_tokens": 89,
+        "projected_delta": -29,
+        "worth_extracting": true
+      },
+      {
+        "members": [
+          "fn@4574",
+          "fn@9613"
+        ],
+        "size": 2,
+        "avg_length": 15.0,
+        "orig_tokens": 30,
+        "projected_new_tokens": 45,
+        "projected_delta": 15,
+        "worth_extracting": false
+      },
+      {
+        "members": [
+          "fn@4682",
+          "fn@11426"
+        ],
+        "size": 2,
+        "avg_length": 14.0,
+        "orig_tokens": 28,
+        "projected_new_tokens": 44,
+        "projected_delta": 16,
+        "worth_extracting": false
+      }
+    ],
+    "bottle": [
+      {
+        "members": [
+          "__iter__",
+          "__len__",
+          "__iter__",
+          "__len__",
+          "__iter__",
+          "__iter__"
+        ],
+        "size": 6,
+        "avg_length": 13.0,
+        "orig_tokens": 78,
+        "projected_new_tokens": 103,
+        "projected_delta": 25,
+        "worth_extracting": false
+      },
+      {
+        "members": [
+          "is_ajax",
+          "status_line",
+          "status_code",
+          "iter_headers",
+          "__call__",
+          "get_syntax"
+        ],
+        "size": 6,
+        "avg_length": 11.0,
+        "orig_tokens": 66,
+        "projected_new_tokens": 101,
+        "projected_delta": 35,
+        "worth_extracting": false
+      },
+      {
+        "members": [
+          "get",
+          "post",
+          "put",
+          "delete",
+          "patch"
+        ],
+        "size": 5,
+        "avg_length": 30.0,
+        "orig_tokens": 150,
+        "projected_new_tokens": 105,
+        "projected_delta": -45,
+        "worth_extracting": true
+      },
+      {
+        "members": [
+          "items",
+          "items",
+          "iteritems"
+        ],
+        "size": 3,
+        "avg_length": 30.0,
+        "orig_tokens": 90,
+        "projected_new_tokens": 75,
+        "projected_delta": -15,
+        "worth_extracting": true
+      },
+      {
+        "members": [
+          "allitems",
+          "iterallitems",
+          "allitems"
+        ],
+        "size": 3,
+        "avg_length": 30.0,
+        "orig_tokens": 90,
+        "projected_new_tokens": 75,
+        "projected_delta": -15,
+        "worth_extracting": true
+      }
+    ]
+  },
+  "cross_language": {
+    "both_have_patterns": true,
+    "both_have_worth": true,
+    "ratio_clusters": 6.0,
+    "ratio_units": 6.92
+  }
+}

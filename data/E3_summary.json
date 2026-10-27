@@ -1,0 +1,127 @@
+{
+  "patch": "E3",
+  "threshold": 0.6,
+  "top_n": 10,
+  "clusters_inspected": [
+    {
+      "cluster_id": 1,
+      "label": "bottle",
+      "size": 9,
+      "avg_norm_len": 27.0,
+      "members": [
+        "values",
+        "items",
+        "allitems",
+        "values",
+        "items",
+        "itervalues",
+        "iteritems",
+        "iterallitems",
+        "allitems"
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "label": "bottle",
+      "size": 3,
+      "avg_norm_len": 78.0,
+      "members": [
+        "view",
+        "decorator",
+        "wrapper"
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "label": "bottle",
+      "size": 3,
+      "avg_norm_len": 77.7,
+      "members": [
+        "auth_basic",
+        "decorator",
+        "wrapper"
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "label": "backbone",
+      "size": 2,
+      "avg_norm_len": 114.0,
+      "members": [
+        "fn@14239",
+        "fn@14966"
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "label": "bottle",
+      "size": 2,
+      "avg_norm_len": 95.0,
+      "members": [
+        "apply",
+        "wrapper"
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "label": "bottle",
+      "size": 2,
+      "avg_norm_len": 87.0,
+      "members": [
+        "__setitem__",
+        "_set_virtual"
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "label": "bottle",
+      "size": 5,
+      "avg_norm_len": 29.0,
+      "members": [
+        "get",
+        "post",
+        "put",
+        "delete",
+        "patch"
+      ]
+    },
+    {
+      "cluster_id": 8,
+      "label": "backbone",
+      "size": 4,
+      "avg_norm_len": 34.5,
+      "members": [
+        "fn@6672",
+        "fn@7178",
+        "fn@13035",
+        "fn@13604"
+      ]
+    },
+    {
+      "cluster_id": 9,
+      "label": "bottle",
+      "size": 6,
+      "avg_norm_len": 23.0,
+      "members": [
+        "__setitem__",
+        "set_header",
+        "__setitem__",
+        "replace",
+        "__setitem__",
+        "replace"
+      ]
+    },
+    {
+      "cluster_id": 10,
+      "label": "backbone",
+      "size": 2,
+      "avg_norm_len": 68.0,
+      "members": [
+        "fn@7081",
+        "fn@12933"
+      ]
+    }
+  ],
+  "inspection_file": "/data/data/com.termux/files/home/corelang/dumps/E3_clusters_to_inspect.txt",
+  "verdict_file": "/data/data/com.termux/files/home/corelang/dumps/E3_verdicts.txt"
+}

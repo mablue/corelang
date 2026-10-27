@@ -1,0 +1,91 @@
+{
+  "patch": "D4-fix2",
+  "source_sha256": "f7509d8f9eaaeb0850451f830b7fadf4ad73d2546d5612620540ac49b241ee5b",
+  "patched_sha256": "69947a484a5f8e9f963096b9aacba7fb59fd61b5ac8486e73cf1f0f096099b66",
+  "cluster": {
+    "members": [
+      "delete",
+      "get",
+      "patch",
+      "post",
+      "put"
+    ],
+    "leverage": 5,
+    "kernels": 1
+  },
+  "tokens": {
+    "orig_total": 150,
+    "ref_total": 169,
+    "delta": 19,
+    "kernel_tokens": 24,
+    "adapter_tokens_each": 29
+  },
+  "invariance": {
+    "all_preserved": true,
+    "pairs_preserved": 10,
+    "pairs_total": 10,
+    "per_pair": {
+      "delete|get": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "delete|patch": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "delete|post": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "delete|put": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "get|patch": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "get|post": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "get|put": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "patch|post": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "patch|put": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      },
+      "post|put": {
+        "before": 2,
+        "after": 2,
+        "preserved": true
+      }
+    }
+  },
+  "behavioral": {
+    "passed": true,
+    "checks": 20,
+    "failures": 0
+  },
+  "lines": {
+    "orig": 4675,
+    "patched": 4678
+  },
+  "diff_path": "/data/data/com.termux/files/home/corelang/dumps/D4_bottle.diff",
+  "patched_path": "/data/data/com.termux/files/home/corelang/dumps/D4_bottle_patched.py"
+}

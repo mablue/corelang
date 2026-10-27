@@ -1,0 +1,110 @@
+═══ F1 REPORT — Bitcoin v0.1.5 ═══
+
+─── SCALE ───
+
+  Files:            26
+  Units found:      1002
+  Total tokens:     91749
+
+─── CLUSTERING (exact d_Λ ≤ 2, same-length) ───
+
+  Pairs compared:   13459
+  Pairs matched:    7362
+  Clusters:         75
+  Worth extracting: 23
+  Potential savings:466 tokens
+
+─── TOP CLUSTERS ───
+
+  [ ] #1: size=117, avg_len=14.0, Δ=+131
+        OnClose                             src/uibase.h
+        OnIdle                              src/uibase.h
+        OnMouseEvents                       src/uibase.h
+        OnPaint                             src/uibase.h
+        ... and 113 more
+
+  [★] #2: size=20, avg_len=17.0, Δ=-23
+        CEditProductDialog::OnButtonDel0    src/ui.cpp
+        CEditProductDialog::OnButtonDel1    src/ui.cpp
+        CEditProductDialog::OnButtonDel2    src/ui.cpp
+        CEditProductDialog::OnButtonDel3    src/ui.cpp
+        ... and 16 more
+
+  [★] #3: size=8, avg_len=26.0, Δ=-62
+        Unserialize                         src/serialize.h
+        Unserialize                         src/serialize.h
+        Unserialize                         src/serialize.h
+        Unserialize                         src/serialize.h
+        ... and 4 more
+
+  [★] #4: size=8, avg_len=25.0, Δ=-55
+        Serialize                           src/serialize.h
+        Serialize                           src/serialize.h
+        Serialize                           src/serialize.h
+        Serialize                           src/serialize.h
+        ... and 4 more
+
+  [★] #5: size=10, avg_len=19.0, Δ=-21
+        print                               src/main.h
+        print                               src/main.h
+        print                               src/main.h
+        print                               src/main.h
+        ... and 6 more
+
+  [★] #6: size=8, avg_len=20.0, Δ=-20
+        GetSerializeSize                    src/serialize.h
+        GetSerializeSize                    src/serialize.h
+        GetSerializeSize                    src/serialize.h
+        GetSerializeSize                    src/serialize.h
+        ... and 4 more
+
+  [★] #7: size=2, avg_len=71.0, Δ=-41
+        GetBlockIndex                       src/main.h
+        GetBlockHash                        src/main.h
+
+  [★] #8: size=3, avg_len=42.0, Δ=-39
+        AddPendingReplyEvent1               src/ui.cpp
+        AddPendingReplyEvent2               src/ui.cpp
+        AddPendingReplyEvent3               src/ui.cpp
+
+  [★] #9: size=2, avg_len=61.0, Δ=-31
+        push_int64                          src/script.h
+        push_uint64                         src/script.h
+
+  [★] #10: size=2, avg_len=59.0, Δ=-29
+        CYourAddressDialog::OnListEndLabelEdit src/ui.cpp
+        CAddressBookDialog::OnListEndLabelEdit src/ui.cpp
+
+─── LARGEST FILES ───
+
+   174 units     93957 bytes  src/ui.cpp
+   160 units     38727 bytes  src/serialize.h
+   117 units     27052 bytes  src/uibase.h
+    96 units     31895 bytes  src/main.h
+    55 units     20541 bytes  src/net.h
+    54 units     80398 bytes  src/main.cpp
+    35 units     13598 bytes  src/bignum.h
+    33 units     10559 bytes  src/db.h
+    32 units    106488 bytes  src/uibase.cpp
+    29 units     17110 bytes  src/script.h
+
+─── HONEST ASSESSMENT ───
+
+  What worked:
+    - kernel/cpp.py parses Bitcoin source without crashing
+    - All 30+ unit tests pass on C++
+    - JS regression preserved (3 clusters in backbone)
+
+  Limits of C++ heuristic:
+    - User-defined types (uint256, CBlock) classified as alpha,
+      so type-only differences don't count toward d_λ
+    - Function names ARE semantic (intentional: they are API),
+      so identical-body methods with different names won't cluster
+    - Preprocessor directives ignored (branches merged)
+    - Operator overloads skipped
+
+  Architectural proof:
+    - kernel/cpp.py  — one new file, ~180 lines
+    - middleware/    — 2 files, ~10 lines total change
+    - analyzer.py    — 1 dispatch branch
+    Everything else untouched. This is why E5 mattered.

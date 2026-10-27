@@ -1,0 +1,549 @@
+╔════════════════════════════════════════════════════════════════════╗
+║          E3 — CLUSTERS TO INSPECT (manual quality review)          ║
+╚════════════════════════════════════════════════════════════════════╝
+
+Threshold: 0.6
+Top 10 clusters by (size × avg_norm_len)
+
+Instructions:
+  For each cluster below, read all members and decide:
+    ✓ REAL     → these functions share logic; refactor is sensible
+    ~ PARTIAL  → related but not worth extracting
+    ✗ NOISE    → only superficially similar; false positive
+
+Write your verdicts in E3_verdicts.txt (I'll create it below).
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 1 — bottle
+  size = 9,  avg_norm_len = 27.0,  avg_pairwise_similarity = 0.67
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    values                   ↔ items                     dist=  8  sim=0.72
+    values                   ↔ allitems                  dist= 14  sim=0.52
+    values                   ↔ values                    dist=  2  sim=0.91
+    values                   ↔ items                     dist=  9  sim=0.69
+    values                   ↔ itervalues                dist=  2  sim=0.91
+    values                   ↔ iteritems                 dist=  8  sim=0.72
+    values                   ↔ iterallitems              dist= 14  sim=0.52
+    values                   ↔ allitems                  dist= 16  sim=0.45
+    items                    ↔ allitems                  dist= 10  sim=0.66
+    items                    ↔ values                    dist= 10  sim=0.66
+    items                    ↔ items                     dist=  2  sim=0.93
+    items                    ↔ itervalues                dist=  8  sim=0.72
+    items                    ↔ iteritems                 dist=  2  sim=0.93
+    items                    ↔ iterallitems              dist= 11  sim=0.62
+    items                    ↔ allitems                  dist= 13  sim=0.55
+    allitems                 ↔ values                    dist= 16  sim=0.45
+    allitems                 ↔ items                     dist= 12  sim=0.59
+    allitems                 ↔ itervalues                dist= 14  sim=0.52
+    allitems                 ↔ iteritems                 dist= 11  sim=0.62
+    allitems                 ↔ iterallitems              dist=  2  sim=0.93
+    allitems                 ↔ allitems                  dist=  3  sim=0.90
+    values                   ↔ items                     dist=  8  sim=0.72
+    values                   ↔ itervalues                dist=  4  sim=0.83
+    values                   ↔ iteritems                 dist= 10  sim=0.66
+    values                   ↔ iterallitems              dist= 16  sim=0.45
+    values                   ↔ allitems                  dist= 14  sim=0.52
+    items                    ↔ itervalues                dist=  9  sim=0.69
+    items                    ↔ iteritems                 dist=  4  sim=0.86
+    items                    ↔ iterallitems              dist= 13  sim=0.55
+    items                    ↔ allitems                  dist= 11  sim=0.62
+    itervalues               ↔ iteritems                 dist=  8  sim=0.72
+    itervalues               ↔ iterallitems              dist= 14  sim=0.52
+    itervalues               ↔ allitems                  dist= 16  sim=0.45
+    iteritems                ↔ iterallitems              dist= 10  sim=0.66
+    iteritems                ↔ allitems                  dist= 12  sim=0.59
+    iterallitems             ↔ allitems                  dist=  3  sim=0.90
+
+  ─── Member 1: values (norm_len=23, raw_len=24) ───
+
+    |         def values(self):
+    |             return (v[-1] for v in self.dict.values())
+
+  ─── Member 2: items (norm_len=29, raw_len=30) ───
+
+    |         def items(self):
+    |             return ((k, v[-1]) for k, v in self.dict.items())
+
+  ─── Member 3: allitems (norm_len=29, raw_len=30) ───
+
+    |         def allitems(self):
+    |             return ((k, v) for k, vl in self.dict.items() for v in vl)
+
+  ─── Member 4: values (norm_len=23, raw_len=24) ───
+
+    |         def values(self):
+    |             return [v[-1] for v in self.dict.values()]
+
+  ─── Member 5: items (norm_len=29, raw_len=30) ───
+
+    |         def items(self):
+    |             return [(k, v[-1]) for k, v in self.dict.items()]
+
+  ─── Member 6: itervalues (norm_len=23, raw_len=24) ───
+
+    |         def itervalues(self):
+    |             return (v[-1] for v in self.dict.itervalues())
+
+  ─── Member 7: iteritems (norm_len=29, raw_len=30) ───
+
+    |         def iteritems(self):
+    |             return ((k, v[-1]) for k, v in self.dict.iteritems())
+
+  ─── Member 8: iterallitems (norm_len=29, raw_len=30) ───
+
+    |         def iterallitems(self):
+    |             return ((k, v) for k, vl in self.dict.iteritems() for v in vl)
+
+  ─── Member 9: allitems (norm_len=29, raw_len=30) ───
+
+    |         def allitems(self):
+    |             return [(k, v) for k, vl in self.dict.iteritems() for v in vl]
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 2 — bottle
+  size = 3,  avg_norm_len = 78.0,  avg_pairwise_similarity = 0.81
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    view                     ↔ decorator                 dist= 11  sim=0.88
+    view                     ↔ wrapper                   dist= 25  sim=0.72
+    decorator                ↔ wrapper                   dist= 14  sim=0.82
+
+  ─── Member 1: view (norm_len=90, raw_len=95) ───
+
+    | def view(tpl_name, **defaults):
+    |     """ Decorator: renders a template for a handler.
+    |         The handler can control its behavior like that:
+    | 
+    |           - return a dict of template vars to fill out the template
+    |           - return something other than a dict and the view decorator will not
+    |             process the template, but return the handler result as is.
+    |             This includes returning a HTTPResponse(dict) to get,
+    |             for instance, JSON with autojson or other castfilters.
+    |     """
+    | 
+    |     def decorator(func):
+    | 
+    |         @functools.wraps(func)
+    |         def wrapper(*args, **kwargs):
+    |             result = func(*args, **kwargs)
+    |             if isinstance(result, (dict, DictMixin)):
+    |                 tplvars = defaults.copy()
+    |                 tplvars.update(result)
+    |                 return template(tpl_name, **tplvars)
+    |             elif result is None:
+    |                 return template(tpl_name, **defaults)
+    |             return result
+    | 
+    |         return wrapper
+    | 
+    |     return decorator
+
+  ─── Member 2: decorator (norm_len=79, raw_len=83) ───
+
+    |     def decorator(func):
+    | 
+    |         @functools.wraps(func)
+    |         def wrapper(*args, **kwargs):
+    |             result = func(*args, **kwargs)
+    |             if isinstance(result, (dict, DictMixin)):
+    |                 tplvars = defaults.copy()
+    |                 tplvars.update(result)
+    |                 return template(tpl_name, **tplvars)
+    |             elif result is None:
+    |                 return template(tpl_name, **defaults)
+    |             return result
+    | 
+    |         return wrapper
+
+  ─── Member 3: wrapper (norm_len=65, raw_len=68) ───
+
+    |         def wrapper(*args, **kwargs):
+    |             result = func(*args, **kwargs)
+    |             if isinstance(result, (dict, DictMixin)):
+    |                 tplvars = defaults.copy()
+    |                 tplvars.update(result)
+    |                 return template(tpl_name, **tplvars)
+    |             elif result is None:
+    |                 return template(tpl_name, **defaults)
+    |             return result
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 3 — bottle
+  size = 3,  avg_norm_len = 77.7,  avg_pairwise_similarity = 0.77
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    auth_basic               ↔ decorator                 dist= 16  sim=0.83
+    auth_basic               ↔ wrapper                   dist= 30  sim=0.68
+    decorator                ↔ wrapper                   dist= 14  sim=0.82
+
+  ─── Member 1: auth_basic (norm_len=93, raw_len=97) ───
+
+    | def auth_basic(check, realm="private", text="Access denied"):
+    |     """ Callback decorator to require HTTP auth (basic).
+    |         TODO: Add route(check_auth=...) parameter. """
+    | 
+    |     def decorator(func):
+    | 
+    |         @functools.wraps(func)
+    |         def wrapper(*a, **ka):
+    |             user, password = request.auth or (None, None)
+    |             if user is None or not check(user, password):
+    |                 err = HTTPError(401, text)
+    |                 err.add_header('WWW-Authenticate', 'Basic realm="%s"' % realm)
+    |                 return err
+    |             return func(*a, **ka)
+    | 
+    |         return wrapper
+    | 
+    |     return decorator
+
+  ─── Member 2: decorator (norm_len=77, raw_len=80) ───
+
+    |     def decorator(func):
+    | 
+    |         @functools.wraps(func)
+    |         def wrapper(*a, **ka):
+    |             user, password = request.auth or (None, None)
+    |             if user is None or not check(user, password):
+    |                 err = HTTPError(401, text)
+    |                 err.add_header('WWW-Authenticate', 'Basic realm="%s"' % realm)
+    |                 return err
+    |             return func(*a, **ka)
+    | 
+    |         return wrapper
+
+  ─── Member 3: wrapper (norm_len=63, raw_len=65) ───
+
+    |         def wrapper(*a, **ka):
+    |             user, password = request.auth or (None, None)
+    |             if user is None or not check(user, password):
+    |                 err = HTTPError(401, text)
+    |                 err.add_header('WWW-Authenticate', 'Basic realm="%s"' % realm)
+    |                 return err
+    |             return func(*a, **ka)
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 4 — backbone
+  size = 2,  avg_norm_len = 114.0,  avg_pairwise_similarity = 0.63
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    fn@14239                 ↔ fn@14966                  dist= 48  sim=0.63
+
+  ─── Member 1: fn@14239 (norm_len=129, raw_len=142) ───
+
+    | function(model, options) {
+    |       options || (options = {});
+    |       var already = this.get(model);
+    |       if (already) throw new Error(["Can't add the same model to a set twice", already.id]);
+    |       this._byId[model.id] = model;
+    |       this._byCid[model.cid] = model;
+    |       model.collection = this;
+    |       var index = this.comparator ? this.sortedIndex(model, this.comparator) : this.length;
+    |       this.models.splice(index, 0, model);
+    |       model.bind('all', this._boundOnModelEvent);
+    |       this.length++;
+    |       if (!options.silent) this.trigger('add', model);
+    |       return model;
+    |     }
+
+  ─── Member 2: fn@14966 (norm_len=99, raw_len=110) ───
+
+    | function(model, options) {
+    |       options || (options = {});
+    |       model = this.get(model);
+    |       if (!model) return null;
+    |       delete this._byId[model.id];
+    |       delete this._byCid[model.cid];
+    |       delete model.collection;
+    |       this.models.splice(this.indexOf(model), 1);
+    |       model.unbind('all', this._boundOnModelEvent);
+    |       this.length--;
+    |       if (!options.silent) this.trigger('remove', model);
+    |       return model;
+    |     }
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 5 — bottle
+  size = 2,  avg_norm_len = 95.0,  avg_pairwise_similarity = 0.73
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    apply                    ↔ wrapper                   dist= 30  sim=0.73
+
+  ─── Member 1: apply (norm_len=110, raw_len=117) ───
+
+    |     def apply(self, callback, route):
+    |         dumps = self.json_dumps
+    |         if not self.json_dumps: return callback
+    | 
+    |         @functools.wraps(callback)
+    |         def wrapper(*a, **ka):
+    |             try:
+    |                 rv = callback(*a, **ka)
+    |             except HTTPResponse as resp:
+    |                 rv = resp
+    | 
+    |             if isinstance(rv, dict):
+    |                 #Attempt to serialize, raises exception on failure
+    |                 json_response = dumps(rv)
+    |                 #Set content type only if serialization successful
+    |                 response.content_type = 'application/json'
+    |                 return json_response
+    |             elif isinstance(rv, HTTPResponse) and isinstance(rv.body, dict):
+    |                 rv.body = dumps(rv.body)
+    |                 rv.content_type = 'application/json'
+    |             return rv
+    | 
+    |         return wrapper
+
+  ─── Member 2: wrapper (norm_len=80, raw_len=85) ───
+
+    |         def wrapper(*a, **ka):
+    |             try:
+    |                 rv = callback(*a, **ka)
+    |             except HTTPResponse as resp:
+    |                 rv = resp
+    | 
+    |             if isinstance(rv, dict):
+    |                 #Attempt to serialize, raises exception on failure
+    |                 json_response = dumps(rv)
+    |                 #Set content type only if serialization successful
+    |                 response.content_type = 'application/json'
+    |                 return json_response
+    |             elif isinstance(rv, HTTPResponse) and isinstance(rv.body, dict):
+    |                 rv.body = dumps(rv.body)
+    |                 rv.content_type = 'application/json'
+    |             return rv
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 6 — bottle
+  size = 2,  avg_norm_len = 87.0,  avg_pairwise_similarity = 0.62
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    __setitem__              ↔ _set_virtual              dist= 37  sim=0.62
+
+  ─── Member 1: __setitem__ (norm_len=98, raw_len=103) ───
+
+    |     def __setitem__(self, key, value):
+    |         if not isinstance(key, basestring):
+    |             raise TypeError('Key has type %r (not a string)' % type(key))
+    | 
+    |         self._virtual_keys.discard(key)
+    | 
+    |         value = self.meta_get(key, 'filter', lambda x: x)(value)
+    |         if key in self and self[key] is value:
+    |             return
+    | 
+    |         self._on_change(key, value)
+    |         dict.__setitem__(self, key, value)
+    | 
+    |         for overlay in self._iter_overlays():
+    |             overlay._set_virtual(key, value)
+
+  ─── Member 2: _set_virtual (norm_len=76, raw_len=80) ───
+
+    |     def _set_virtual(self, key, value):
+    |         """ Recursively set or update virtual keys. """
+    |         if key in self and key not in self._virtual_keys:
+    |             return  # Do nothing for non-virtual keys.
+    | 
+    |         self._virtual_keys.add(key)
+    |         if key in self and self[key] is not value:
+    |             self._on_change(key, value)
+    |         dict.__setitem__(self, key, value)
+    |         for overlay in self._iter_overlays():
+    |             overlay._set_virtual(key, value)
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 7 — bottle
+  size = 5,  avg_norm_len = 29.0,  avg_pairwise_similarity = 0.90
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    get                      ↔ post                      dist=  3  sim=0.90
+    get                      ↔ put                       dist=  3  sim=0.90
+    get                      ↔ delete                    dist=  3  sim=0.90
+    get                      ↔ patch                     dist=  3  sim=0.90
+    post                     ↔ put                       dist=  3  sim=0.90
+    post                     ↔ delete                    dist=  3  sim=0.90
+    post                     ↔ patch                     dist=  3  sim=0.90
+    put                      ↔ delete                    dist=  3  sim=0.90
+    put                      ↔ patch                     dist=  3  sim=0.90
+    delete                   ↔ patch                     dist=  3  sim=0.90
+
+  ─── Member 1: get (norm_len=29, raw_len=30) ───
+
+    |     def get(self, path=None, method='GET', **options):
+    |         """ Equals :meth:`route`. """
+    |         return self.route(path, method, **options)
+
+  ─── Member 2: post (norm_len=29, raw_len=30) ───
+
+    |     def post(self, path=None, method='POST', **options):
+    |         """ Equals :meth:`route` with a ``POST`` method parameter. """
+    |         return self.route(path, method, **options)
+
+  ─── Member 3: put (norm_len=29, raw_len=30) ───
+
+    |     def put(self, path=None, method='PUT', **options):
+    |         """ Equals :meth:`route` with a ``PUT`` method parameter. """
+    |         return self.route(path, method, **options)
+
+  ─── Member 4: delete (norm_len=29, raw_len=30) ───
+
+    |     def delete(self, path=None, method='DELETE', **options):
+    |         """ Equals :meth:`route` with a ``DELETE`` method parameter. """
+    |         return self.route(path, method, **options)
+
+  ─── Member 5: patch (norm_len=29, raw_len=30) ───
+
+    |     def patch(self, path=None, method='PATCH', **options):
+    |         """ Equals :meth:`route` with a ``PATCH`` method parameter. """
+    |         return self.route(path, method, **options)
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 8 — backbone
+  size = 4,  avg_norm_len = 34.5,  avg_pairwise_similarity = 0.70
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    fn@6672                  ↔ fn@7178                   dist= 10  sim=0.71
+    fn@6672                  ↔ fn@13035                  dist= 10  sim=0.71
+    fn@6672                  ↔ fn@13604                  dist=  8  sim=0.81
+    fn@7178                  ↔ fn@13035                  dist= 12  sim=0.65
+    fn@7178                  ↔ fn@13604                  dist= 10  sim=0.76
+    fn@13035                 ↔ fn@13604                  dist= 18  sim=0.57
+
+  ─── Member 1: fn@6672 (norm_len=34, raw_len=36) ───
+
+    | function(resp) {
+    |         if (!model.set(resp.model)) return false;
+    |         if (options.success) options.success(model, resp);
+    |       }
+
+  ─── Member 2: fn@7178 (norm_len=34, raw_len=36) ───
+
+    | function(resp) {
+    |         if (model.collection) model.collection.remove(model);
+    |         if (options.success) options.success(model, resp);
+    |       }
+
+  ─── Member 3: fn@13035 (norm_len=28, raw_len=30) ───
+
+    | function(resp) {
+    |         collection.refresh(resp.models);
+    |         if (options.success) options.success(collection, resp);
+    |       }
+
+  ─── Member 4: fn@13604 (norm_len=42, raw_len=45) ───
+
+    | function(resp) {
+    |         if (!model.set(resp.model)) return false;
+    |         model.collection.add(model);
+    |         if (options.success) options.success(model, resp);
+    |       }
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 9 — bottle
+  size = 6,  avg_norm_len = 23.0,  avg_pairwise_similarity = 0.70
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    __setitem__              ↔ set_header                dist=  2  sim=0.92
+    __setitem__              ↔ __setitem__               dist= 12  sim=0.52
+    __setitem__              ↔ replace                   dist= 11  sim=0.56
+    __setitem__              ↔ __setitem__               dist=  3  sim=0.88
+    __setitem__              ↔ replace                   dist=  4  sim=0.84
+    set_header               ↔ __setitem__               dist= 14  sim=0.46
+    set_header               ↔ replace                   dist= 11  sim=0.58
+    set_header               ↔ __setitem__               dist=  5  sim=0.81
+    set_header               ↔ replace                   dist=  5  sim=0.81
+    __setitem__              ↔ replace                   dist=  8  sim=0.60
+    __setitem__              ↔ __setitem__               dist= 10  sim=0.60
+    __setitem__              ↔ replace                   dist= 11  sim=0.56
+    replace                  ↔ __setitem__               dist=  8  sim=0.68
+    replace                  ↔ replace                   dist=  7  sim=0.72
+    __setitem__              ↔ replace                   dist=  1  sim=0.96
+
+  ─── Member 1: __setitem__ (norm_len=25, raw_len=26) ───
+
+    |     def __setitem__(self, name, value):
+    |         self._headers[_hkey(name)] = [_hval(value)]
+
+  ─── Member 2: set_header (norm_len=26, raw_len=27) ───
+
+    |     def set_header(self, name, value):
+    |         """ Create a new response header, replacing any previously defined
+    |             headers with the same name. """
+    |         self._headers[_hkey(name)] = [_hval(value)]
+
+  ─── Member 3: __setitem__ (norm_len=17, raw_len=18) ───
+
+    |     def __setitem__(self, key, value):
+    |         self.append(key, value)
+
+  ─── Member 4: replace (norm_len=20, raw_len=21) ───
+
+    |     def replace(self, key, value):
+    |         """ Replace the list of values with a single value. """
+    |         self.dict[key] = [value]
+
+  ─── Member 5: __setitem__ (norm_len=25, raw_len=26) ───
+
+    |     def __setitem__(self, key, value):
+    |         self.dict[_hkey(key)] = [_hval(value)]
+
+  ─── Member 6: replace (norm_len=25, raw_len=26) ───
+
+    |     def replace(self, key, value):
+    |         self.dict[_hkey(key)] = [_hval(value)]
+
+
+══════════════════════════════════════════════════════════════════════
+CLUSTER 10 — backbone
+  size = 2,  avg_norm_len = 68.0,  avg_pairwise_similarity = 0.80
+══════════════════════════════════════════════════════════════════════
+
+  pairwise distances (Levenshtein on normalized tokens):
+    fn@7081                  ↔ fn@12933                  dist= 14  sim=0.80
+
+  ─── Member 1: fn@7081 (norm_len=71, raw_len=78) ───
+
+    | function(options) {
+    |       options || (options = {});
+    |       var model = this;
+    |       var success = function(resp) {
+    |         if (model.collection) model.collection.remove(model);
+    |         if (options.success) options.success(model, resp);
+    |       };
+    |       Backbone.sync('delete', this, success, options.error);
+    |       return this;
+    |     }
+
+  ─── Member 2: fn@12933 (norm_len=65, raw_len=72) ───
+
+    | function(options) {
+    |       options || (options = {});
+    |       var collection = this;
+    |       var success = function(resp) {
+    |         collection.refresh(resp.models);
+    |         if (options.success) options.success(collection, resp);
+    |       };
+    |       Backbone.sync('read', this, success, options.error);
+    |       return this;
+    |     }
+

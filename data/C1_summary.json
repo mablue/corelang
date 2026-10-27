@@ -1,0 +1,52 @@
+{
+  "patch": "C1",
+  "source_sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+  "groups_analyzed": 3,
+  "true_duplicates": 0,
+  "pattern_instances": 3,
+  "total_parameters": 6,
+  "groups": [
+    {
+      "unit_ids": [
+        "U010",
+        "U025"
+      ],
+      "names": [
+        "toJSON",
+        "previousAttributes"
+      ],
+      "classification": "pattern_instance",
+      "parameter_count": 1,
+      "logical_parameter_count": 1,
+      "skeleton_rendered": "function ( ) { return _ . clone ( this . @P0 ) ; }"
+    },
+    {
+      "unit_ids": [
+        "U011",
+        "U031"
+      ],
+      "names": [
+        "get",
+        "at"
+      ],
+      "classification": "pattern_instance",
+      "parameter_count": 3,
+      "logical_parameter_count": 2,
+      "skeleton_rendered": "function ( @P0 ) { return this . @P1 [ @P2 ] ; }"
+    },
+    {
+      "unit_ids": [
+        "U027",
+        "U028"
+      ],
+      "names": [
+        "add",
+        "remove"
+      ],
+      "classification": "pattern_instance",
+      "parameter_count": 2,
+      "logical_parameter_count": 1,
+      "skeleton_rendered": "function ( models , options ) { if ( ! _ . isArray ( models ) ) return this . @P0 ( models , options ) ; for ( var i = 0 ; i < models . length ; i ++ ) this . @P1 ( models [ i ] , options ) ; return models ; }"
+    }
+  ]
+}

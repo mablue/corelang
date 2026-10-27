@@ -1,0 +1,14 @@
+{
+  "patch": "A1",
+  "utc": "2026-10-27T08:03:20.131225+00:00",
+  "target": {
+    "name": "backbone.js",
+    "version": "0.1.0",
+    "url": "https://raw.githubusercontent.com/jashkenas/backbone/0.1.0/backbone.js",
+    "path": "/data/data/com.termux/files/home/corelang/workspace/source/backbone.js",
+    "size_bytes": 21485,
+    "sha256": "6d68e6ecc0125efabed31d45b50faa69e3cdfb3315b70a85dd8a5a1f8d47e0ae",
+    "lines": 618,
+    "js_syntax": "ok"
+  }
+}

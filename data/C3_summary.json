@@ -1,0 +1,98 @@
+{
+  "patch": "C3_fix",
+  "behavioral": {
+    "passed": true,
+    "checks": 18,
+    "failures": []
+  },
+  "groups": [
+    {
+      "label": "get/at",
+      "tokens_orig": {
+        "a": 14,
+        "b": 14
+      },
+      "tokens_new": {
+        "a": 18,
+        "b": 18
+      },
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "params_new": [
+        {
+          "a": "attr",
+          "b": "index",
+          "pos": [
+            2,
+            14
+          ],
+          "ctx": [
+            "parameter_name",
+            "unknown"
+          ],
+          "class": "alpha"
+        },
+        {
+          "a": "attributes",
+          "b": "models",
+          "pos": [
+            12
+          ],
+          "ctx": [
+            "field_access"
+          ],
+          "class": "semantic"
+        }
+      ]
+    },
+    {
+      "label": "toJSON/previousAttributes",
+      "tokens_orig": {
+        "a": 15,
+        "b": 15
+      },
+      "tokens_new": {
+        "a": 15,
+        "b": 15
+      },
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "params_new": [
+        {
+          "a": "attributes",
+          "b": "_previousAttributes",
+          "pos": [
+            11
+          ],
+          "ctx": [
+            "field_access"
+          ],
+          "class": "semantic"
+        }
+      ]
+    },
+    {
+      "label": "add/remove",
+      "tokens_orig": {
+        "a": 59,
+        "b": 59
+      },
+      "tokens_new": {
+        "a": 20,
+        "b": 20
+      },
+      "d_lambda_orig": 1,
+      "d_lambda_new": 1,
+      "invariant": true,
+      "params_new": []
+    }
+  ],
+  "summary": {
+    "groups_count": 3,
+    "all_invariant": true,
+    "all_behavioral_pass": true,
+    "total_checks": 18
+  }
+}
